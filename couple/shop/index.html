@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>커플 리포트 구매 — 42world</title>
+<title>Relatório de Casal — loveTWO</title>
 <style>
 *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
 :root { --bg:#0F121E; --card:#1A2030; --gold:#B8860B; --gold-l:#D4A017; --silver:#8899AA; --text:#E8E4DC; --border:rgba(184,134,11,0.2); }
-body { font-family:'Apple SD Gothic Neo','Malgun Gothic','Montserrat','Inter',sans-serif; background:var(--bg); color:var(--text); min-height:100vh; }
+body { font-family:'Montserrat','Inter',sans-serif; background:var(--bg); color:var(--text); min-height:100vh; }
 
 /* NAV */
 .nav { display:flex; align-items:center; padding:0 20px; height:52px; background:rgba(15,18,30,0.97); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:99; }
@@ -22,15 +22,15 @@ body { font-family:'Apple SD Gothic Neo','Malgun Gothic','Montserrat','Inter',sa
 .shop-sub { font-size:14px; color:var(--silver); line-height:1.7; margin-bottom:28px; }
 
 /* 상품 카드 공통 */
-.product-card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:24px 20px; margin-bottom:12px; cursor:pointer; transition:border-color .2s, background .2s; }
+.product-card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:24px 20px; margin-bottom:12px; cursor:pointer; transition:border-color .2s, background .2s; text-decoration:none; display:block; color:inherit; }
 .product-card:hover { border-color:var(--gold-l); background:#1F2840; }
-.product-card.selected { border-color:var(--gold-l); background:#1F2840; box-shadow:0 0 0 2px rgba(184,134,11,0.25); }
 .card-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:4px; }
 .card-combo { font-size:13px; font-weight:900; color:#fff; letter-spacing:.5px; }
 .card-label { font-size:11px; color:var(--silver); font-weight:400; }
 .card-desc { font-size:12px; color:var(--silver); line-height:1.6; margin-top:4px; }
 .card-price { font-size:18px; font-weight:900; color:var(--gold-l); margin-top:8px; }
 .card-orig { font-size:12px; color:var(--silver); text-decoration:line-through; margin-right:6px; }
+.card-cta { font-size:12px; color:var(--gold-l); margin-top:6px; font-weight:700; }
 
 /* 필터 탭 */
 .filter-wrap { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; }
@@ -42,17 +42,6 @@ body { font-family:'Apple SD Gothic Neo','Malgun Gothic','Montserrat','Inter',sa
 .search-wrap input { width:100%; padding:11px 16px; border-radius:12px; border:1px solid rgba(136,153,170,0.2); background:#1A2030; color:var(--text); font-size:13px; font-family:inherit; outline:none; }
 .search-wrap input:focus { border-color:var(--gold-l); }
 .search-wrap input::placeholder { color:var(--silver); }
-
-/* 선택 구매 바 */
-.buy-bar { position:fixed; bottom:0; left:0; right:0; background:rgba(15,18,30,0.98); border-top:1px solid var(--border); padding:16px 20px; z-index:200; display:none; }
-.buy-bar.show { display:block; }
-.buy-bar-inner { max-width:560px; margin:0 auto; display:flex; align-items:center; gap:12px; }
-.buy-bar-text { flex:1; font-size:13px; color:var(--silver); }
-.buy-bar-text strong { color:#fff; }
-.btn-buy { padding:14px 28px; background:linear-gradient(135deg,#B8860B,#D4A017); border:none; border-radius:12px; color:#0F121E; font-size:15px; font-weight:900; cursor:pointer; transition:opacity .2s; white-space:nowrap; font-family:inherit; }
-.btn-buy:hover { opacity:.85; }
-.btn-buy-full { width:100%; padding:17px; background:linear-gradient(135deg,#B8860B,#D4A017); border:none; border-radius:13px; color:#0F121E; font-size:16px; font-weight:900; cursor:pointer; transition:opacity .2s; margin-top:20px; font-family:inherit; }
-.btn-buy-full:hover { opacity:.85; }
 
 .notice { background:rgba(136,153,170,0.06); border:1px solid rgba(136,153,170,0.15); border-radius:12px; padding:16px 18px; margin-top:20px; font-size:13px; color:var(--silver); line-height:1.7; }
 .count-text { font-size:13px; color:var(--silver); margin-bottom:12px; }
@@ -70,16 +59,16 @@ footer { border-top:1px solid var(--border); padding:28px 20px; text-align:cente
 </head>
 <body>
 <nav class="nav">
-  <a href="/"><span class="dim">42</span>WORLD <span style="color:rgba(184,134,11,0.5);font-weight:300;font-size:13px;"> · </span><span style="color:#8899AA;font-weight:400;font-size:10px;letter-spacing:2px;">COUPLE</span></a>
+  <a href="/"><span class="dim">love</span>TWO</a>
 </nav>
 
 <div class="wrap">
   <div class="badge">COUPLE REPORT</div>
-  <div class="shop-title">커플 심층 리포트</div>
-  <div class="shop-sub">두 사람의 유형 조합 64가지 중 우리 조합을 선택하세요.<br>관계 패턴·갈등 원인·소통법이 담긴 PDF를 즉시 다운로드하세요.</div>
+  <div class="shop-title">Relatório Profundo de Casal</div>
+  <div class="shop-sub">Escolha a combinação dos dois tipos do casal.<br>Baixe o PDF com padrões de relacionamento, conflitos e formas de comunicar.</div>
 
   <div class="filter-wrap" id="filter-wrap">
-    <button class="filter-btn active" data-filter="ALL" onclick="setFilter('ALL',this)">전체 (64)</button>
+    <button class="filter-btn active" data-filter="ALL" onclick="setFilter('ALL',this)">Todos (64)</button>
     <button class="filter-btn" data-filter="SPARK" onclick="setFilter('SPARK',this)">SPARK</button>
     <button class="filter-btn" data-filter="VISION" onclick="setFilter('VISION',this)">VISION</button>
     <button class="filter-btn" data-filter="STEADY" onclick="setFilter('STEADY',this)">STEADY</button>
@@ -91,126 +80,182 @@ footer { border-top:1px solid var(--border); padding:28px 20px; text-align:cente
   </div>
 
   <div class="search-wrap">
-    <input type="text" id="search-input" placeholder="유형 검색 (예: SPARK, VISION...)" oninput="renderList()">
+    <input type="text" id="search-input" placeholder="Buscar tipo (ex: SPARK, VISION...)" oninput="renderList()">
   </div>
 
-  <div class="count-text" id="count-text">총 <span>64</span>개 조합</div>
+  <div class="count-text" id="count-text">Total de <span>64</span> combinações</div>
   <div id="product-list"></div>
 
   <div class="notice">
-    결제 후 다운로드 링크가 이메일로 발송됩니다.<br>
-    문의: lovetwo.app | 환불은 <a href="/legal/refund.html" style="color:var(--gold-l)">환불정책</a>을 확인해 주세요.
-  </div>
-</div>
-
-<div class="buy-bar" id="buy-bar">
-  <div class="buy-bar-inner">
-    <div class="buy-bar-text" id="buy-bar-text">선택된 상품이 없습니다</div>
-    <button class="btn-buy" onclick="handleBuy()">카카오페이 결제 →</button>
+    Após a compra, o link de download será enviado por e-mail.<br>
+    Dúvidas: lovetwo.app | Reembolso: veja a <a href="/legal/refund.html" style="color:var(--gold-l)">política de reembolso</a>.
   </div>
 </div>
 
 <footer>
   <div class="footer-links">
-    <a href="/legal/terms.html">이용약관</a>
-    <a href="/legal/privacy.html">개인정보처리방침</a>
-    <a href="/legal/refund.html">환불정책</a>
+    <a href="/legal/terms.html">Termos de Uso</a>
+    <a href="/legal/privacy.html">Política de Privacidade</a>
+    <a href="/legal/refund.html">Política de Reembolso</a>
   </div>
   <div class="footer-biz">
-    상호: 온유컴퍼니MINDWAYS8 · 사업자등록번호: 533-62-00508<br>
     lovetwo.app · © 2025 Shadowgram
   </div>
 </footer>
 
 <script>
 const TYPES = ['SPARK','VISION','STEADY','PLAYER','HARMONY','SOUL','LOGIC','LEADER'];
-const TYPE_KR = {
-  SPARK:'불꽃형', VISION:'운명형', STEADY:'닻형', PLAYER:'플레이어형',
-  HARMONY:'온기형', SOUL:'영혼형', LOGIC:'논리형', LEADER:'리더형'
+
+const TYPE_PT = {
+  SPARK:'Explorador', VISION:'Visionário', STEADY:'Protetor', PLAYER:'Espontâneo',
+  HARMONY:'Harmonizador', SOUL:'Guardião', LOGIC:'Analista', LEADER:'Estrategista'
 };
+
+const HOTMART_URLS = {
+  'SPARK_SPARK': 'https://go.hotmart.com/D105086386P',
+  'SPARK_VISION': 'https://go.hotmart.com/N105086407C',
+  'SPARK_STEADY': 'https://go.hotmart.com/J105086426E',
+  'SPARK_PLAYER': 'https://go.hotmart.com/B105086427G',
+  'SPARK_HARMONY': 'https://go.hotmart.com/K105086412I',
+  'SPARK_SOUL': 'https://go.hotmart.com/M105086419F',
+  'SPARK_LOGIC': 'https://go.hotmart.com/W105086421M',
+  'SPARK_LEADER': 'https://go.hotmart.com/Y105086423G',
+  'VISION_SPARK': 'https://go.hotmart.com/X105086441Q',
+  'VISION_VISION': 'https://go.hotmart.com/M105086442H',
+  'VISION_STEADY': 'https://go.hotmart.com/H105086477W',
+  'VISION_PLAYER': 'https://go.hotmart.com/W105086478B',
+  'VISION_HARMONY': 'https://go.hotmart.com/F105086450N',
+  'VISION_SOUL': 'https://go.hotmart.com/E105086458W',
+  'VISION_LOGIC': 'https://go.hotmart.com/D105086468D',
+  'VISION_LEADER': 'https://go.hotmart.com/M105086471S',
+  'STEADY_SPARK': 'https://go.hotmart.com/F105088609X',
+  'STEADY_VISION': 'https://go.hotmart.com/X105088622U',
+  'STEADY_STEADY': 'https://go.hotmart.com/K105088696U',
+  'STEADY_PLAYER': 'https://go.hotmart.com/H105088712G',
+  'STEADY_HARMONY': 'https://go.hotmart.com/R105088637K',
+  'STEADY_SOUL': 'https://go.hotmart.com/V105088648G',
+  'STEADY_LOGIC': 'https://go.hotmart.com/L105088661N',
+  'STEADY_LEADER': 'https://go.hotmart.com/Y105088675R',
+  'PLAYER_SPARK': 'https://go.hotmart.com/D105088725M',
+  'PLAYER_VISION': 'https://go.hotmart.com/U105088736G',
+  'PLAYER_STEADY': 'https://go.hotmart.com/C105088808F',
+  'PLAYER_PLAYER': 'https://go.hotmart.com/N105088825U',
+  'PLAYER_HARMONY': 'https://go.hotmart.com/H105088747V',
+  'PLAYER_SOUL': 'https://go.hotmart.com/N105088758A',
+  'PLAYER_LOGIC': 'https://go.hotmart.com/L105088772E',
+  'PLAYER_LEADER': 'https://go.hotmart.com/B105088793S',
+  'HARMONY_SPARK': 'https://go.hotmart.com/X105086484T',
+  'HARMONY_VISION': 'https://go.hotmart.com/P105086486T',
+  'HARMONY_STEADY': 'https://go.hotmart.com/K105086504M',
+  'HARMONY_PLAYER': 'https://go.hotmart.com/K105086510W',
+  'HARMONY_HARMONY': 'https://go.hotmart.com/S105086490O',
+  'HARMONY_SOUL': 'https://go.hotmart.com/H105086495X',
+  'HARMONY_LOGIC': 'https://go.hotmart.com/U105086499F',
+  'HARMONY_LEADER': 'https://go.hotmart.com/M105086501X',
+  'SOUL_SPARK': 'https://go.hotmart.com/G105088221T',
+  'SOUL_VISION': 'https://go.hotmart.com/Q105088238G',
+  'SOUL_STEADY': 'https://go.hotmart.com/I105088309I',
+  'SOUL_PLAYER': 'https://go.hotmart.com/A105088329C',
+  'SOUL_HARMONY': 'https://go.hotmart.com/X105088250S',
+  'SOUL_SOUL': 'https://go.hotmart.com/I105088267Q',
+  'SOUL_LOGIC': 'https://go.hotmart.com/F105088281S',
+  'SOUL_LEADER': 'https://go.hotmart.com/O105088296W',
+  'LOGIC_SPARK': 'https://go.hotmart.com/R105088345A',
+  'LOGIC_VISION': 'https://go.hotmart.com/T105088358P',
+  'LOGIC_STEADY': 'https://go.hotmart.com/B105088435P',
+  'LOGIC_PLAYER': 'https://go.hotmart.com/N105088422P',
+  'LOGIC_HARMONY': 'https://go.hotmart.com/F105088376R',
+  'LOGIC_SOUL': 'https://go.hotmart.com/K105088395D',
+  'LOGIC_LOGIC': 'https://go.hotmart.com/C105088411B',
+  'LOGIC_LEADER': 'https://go.hotmart.com/W105088449J',
+  'LEADER_SPARK': 'https://go.hotmart.com/G105088465T',
+  'LEADER_VISION': 'https://go.hotmart.com/I105088482K',
+  'LEADER_STEADY': 'https://go.hotmart.com/Y105088572Q',
+  'LEADER_PLAYER': 'https://go.hotmart.com/A105088594Q',
+  'LEADER_HARMONY': 'https://go.hotmart.com/S105088511U',
+  'LEADER_SOUL': 'https://go.hotmart.com/W105088523Y',
+  'LEADER_LOGIC': 'https://go.hotmart.com/M105088535R',
+  'LEADER_LEADER': 'https://go.hotmart.com/M105088551F'
+};
+
 const COMBO_DESC = {
-  'SPARK×SPARK':'두 불꽃이 만난 에너지 폭발 조합. 함께라면 못 할 게 없지만, 가끔 브레이크가 필요해요.',
-  'SPARK×VISION':'즉흥과 직관의 만남. 서로의 다른 눈으로 세상을 두 배로 봅니다.',
-  'SPARK×STEADY':'자유로운 영혼과 든든한 기둥의 조합. 균형을 찾는 여정이 관계의 묘미예요.',
-  'SPARK×PLAYER':'둘 다 지금 이 순간을 사랑해요. 세상에서 가장 신나는 파트너십.',
-  'SPARK×HARMONY':'SPARK의 에너지를 HARMONY가 따뜻하게 감싸주는 조합.',
-  'SPARK×SOUL':'가능성을 보는 눈과 깊이를 보는 눈이 만난 특별한 케미.',
-  'SPARK×LOGIC':'아이디어와 검증의 황금 콤비. 생각의 속도가 달라도 잘 맞아요.',
-  'SPARK×LEADER':'비전과 실행력의 드림팀. 세상을 바꿀 수 있는 조합이에요.',
-  'VISION×SPARK':'직관과 가능성이 만나 화학반응을 일으키는 조합.',
-  'VISION×VISION':'두 개의 깊은 우주가 만났어요. 서로를 이해하는 깊이가 남다릅니다.',
-  'VISION×STEADY':'VISION의 큰 그림을 STEADY가 현실로 만들어주는 완성형 커플.',
-  'VISION×PLAYER':'미래를 보는 눈과 현재를 즐기는 감각의 흥미로운 조화.',
-  'VISION×HARMONY':'통찰과 따뜻함이 만나는 조합. 주변 사람들에게도 영향을 줍니다.',
-  'VISION×SOUL':'두 심층 유형의 만남. 말하지 않아도 통하는 깊은 연결.',
-  'VISION×LOGIC':'직관과 논리가 교차하며 서로의 빈칸을 채워주는 파트너.',
-  'VISION×LEADER':'VISION의 통찰이 LEADER의 실행으로 꽃피는 조합.',
-  'STEADY×SPARK':'안정적인 STEADY가 SPARK의 든든한 베이스가 되어줘요.',
-  'STEADY×VISION':'현실과 이상의 균형을 찾는 조합. 서로가 없으면 한쪽으로 기울어요.',
-  'STEADY×STEADY':'둘 다 믿음직하고 헌신적이에요. 가장 안정적인 관계를 만듭니다.',
-  'STEADY×PLAYER':'안정과 모험의 콤비. 서로의 세계를 살짝씩 넓혀주는 관계.',
-  'STEADY×HARMONY':'두 유형 모두 관계를 소중히 여겨요. 따뜻하고 안정적인 커플.',
-  'STEADY×SOUL':'묵묵한 헌신과 깊은 감수성이 만나는 조용하지만 깊은 관계.',
-  'STEADY×LOGIC':'실용과 논리의 만남. 문제가 생기면 같이 차근차근 풀어나가요.',
-  'STEADY×LEADER':'STEADY의 성실함과 LEADER의 추진력이 시너지를 내는 조합.',
-  'PLAYER×SPARK':'두 에너지가 만나 세상에서 가장 신나는 커플이 됩니다.',
-  'PLAYER×VISION':'현재와 미래를 동시에 보는 조합. 지루할 틈이 없어요.',
-  'PLAYER×STEADY':'PLAYER의 생동감이 STEADY를 환하게 밝혀주는 케미.',
-  'PLAYER×PLAYER':'지금 이 순간을 최대로 즐기는 두 사람. 함께라면 매일이 축제예요.',
-  'PLAYER×HARMONY':'PLAYER의 에너지와 HARMONY의 따뜻함이 어우러지는 조합.',
-  'PLAYER×SOUL':'활동적인 외면과 깊은 내면이 서로를 궁금하게 만드는 커플.',
-  'PLAYER×LOGIC':'즉흥과 분석의 만남. 서로에게 없는 것을 배우며 성장해요.',
-  'PLAYER×LEADER':'행동력과 리더십이 결합된 강력한 파트너십.',
-  'HARMONY×SPARK':'HARMONY가 SPARK의 열정을 따뜻하게 품어주는 조합.',
-  'HARMONY×VISION':'감성과 통찰이 만나 주변을 행복하게 만드는 커플.',
-  'HARMONY×STEADY':'두 유형 모두 관계 중심적이에요. 가장 조화로운 커플 중 하나.',
-  'HARMONY×PLAYER':'HARMONY의 따뜻함이 PLAYER의 에너지를 포근히 감싸줘요.',
-  'HARMONY×HARMONY':'서로를 깊이 배려하는 두 사람. 갈등보다 화합을 선택해요.',
-  'HARMONY×SOUL':'두 감성 유형이 만나 세상에서 가장 감성적인 커플이 됩니다.',
-  'HARMONY×LOGIC':'감성과 이성의 클래식 조합. 서로가 서로의 균형이 되어줘요.',
-  'HARMONY×LEADER':'HARMONY의 공감 능력이 LEADER의 결단력을 부드럽게 만들어줘요.',
-  'SOUL×SPARK':'SOUL의 깊이가 SPARK에게 의미 있는 방향을 제시해줍니다.',
-  'SOUL×VISION':'두 내면 탐구자의 만남. 말 한마디에 우주가 열리는 대화를 나눠요.',
-  'SOUL×STEADY':'SOUL의 감수성을 STEADY가 묵묵히 지지해주는 안정적인 관계.',
-  'SOUL×PLAYER':'조용한 심연과 밝은 에너지의 신기한 조화. 서로를 성장시켜요.',
-  'SOUL×HARMONY':'깊은 감수성이 두 배가 되는 조합. 서로의 마음을 잘 읽어요.',
-  'SOUL×SOUL':'둘 다 깊이 느끼고 깊이 사랑해요. 강렬하고 진한 관계.',
-  'SOUL×LOGIC':'감성과 논리가 충돌하기도 하지만, 서로를 통해 균형을 찾아요.',
-  'SOUL×LEADER':'SOUL의 가치관이 LEADER에게 나침반이 되어주는 조합.',
-  'LOGIC×SPARK':'LOGIC이 SPARK의 아이디어를 정제하고 실현 가능하게 만들어줘요.',
-  'LOGIC×VISION':'두 분석가의 만남. 세상의 패턴을 함께 읽어내는 파트너십.',
-  'LOGIC×STEADY':'두 유형 모두 신뢰와 일관성을 중요시해요. 단단한 관계.',
-  'LOGIC×PLAYER':'논리와 즉흥의 조합. 서로의 결핍을 재미있게 채워줘요.',
-  'LOGIC×HARMONY':'이성과 감성의 균형을 찾아가는 성장형 커플.',
-  'LOGIC×SOUL':'분석과 감수성이 공존하는 조합. 심층적 대화를 나눠요.',
-  'LOGIC×LOGIC':'둘 다 논리적이에요. 논쟁이 많아 보이지만 실은 깊이 이해해요.',
-  'LOGIC×LEADER':'논리와 실행의 완벽한 팀. 목표를 향해 효율적으로 나아가요.',
-  'LEADER×SPARK':'두 추진력이 만나 엄청난 에너지를 뿜어내는 조합.',
-  'LEADER×VISION':'LEADER의 실행력과 VISION의 통찰이 결합된 최강 파트너십.',
-  'LEADER×STEADY':'LEADER의 속도를 STEADY가 현명하게 조율해주는 관계.',
-  'LEADER×PLAYER':'두 행동파의 만남. 늘 무언가를 하고 있는 활동적인 커플.',
-  'LEADER×HARMONY':'LEADER의 결단력과 HARMONY의 공감력이 균형을 이뤄요.',
-  'LEADER×SOUL':'목표 지향과 가치 지향이 만나 서로를 깊이 있게 만들어줘요.',
-  'LEADER×LOGIC':'목표와 방법론이 결합된 조합. 함께라면 못 이룰 게 없어요.',
-  'LEADER×LEADER':'두 리더의 만남. 주도권 다툼도 있지만 서로를 가장 이해해요.'
+  'SPARK×SPARK':'Duas chamas que se encontram. Juntos são imparáveis, mas às vezes precisam de pausa.',
+  'SPARK×VISION':'Espontaneidade e intuição. Vocês enxergam o mundo por dois ângulos diferentes e fascinantes.',
+  'SPARK×STEADY':'Alma livre e pilar sólido. A jornada para encontrar equilíbrio é a beleza desta relação.',
+  'SPARK×PLAYER':'Ambos amam o momento presente. A parceria mais animada do mundo.',
+  'SPARK×HARMONY':'A energia do SPARK envolta pelo calor do HARMONY.',
+  'SPARK×SOUL':'O olhar que vê possibilidades encontra a profundidade — química especial.',
+  'SPARK×LOGIC':'Ideia e verificação: a dupla dourada. Velocidades diferentes, mas encaixam.',
+  'SPARK×LEADER':'Visão e execução: o dream team que pode mudar o mundo.',
+  'VISION×SPARK':'Intuição e possibilidade: uma reação química instantânea.',
+  'VISION×VISION':'Dois universos profundos se encontraram. A compreensão mútua é única.',
+  'VISION×STEADY':'O grande plano do VISION ganha forma nas mãos do STEADY — casal completo.',
+  'VISION×PLAYER':'Futuro e presente em harmonia. Nunca há tédio entre vocês.',
+  'VISION×HARMONY':'Intuição e calor se encontram. Juntos influenciam quem está ao redor.',
+  'VISION×SOUL':'Dois exploradores do interior. Se comunicam sem palavras.',
+  'VISION×LOGIC':'Intuição e lógica se cruzam, preenchendo os espaços um do outro.',
+  'VISION×LEADER':'A visão do VISION floresce na execução do LEADER.',
+  'STEADY×SPARK':'O STEADY confiável serve de base sólida para o SPARK voar.',
+  'STEADY×VISION':'Equilíbrio entre realidade e ideal. Um sem o outro ficaria desequilibrado.',
+  'STEADY×STEADY':'Ambos são confiáveis e dedicados. Criam o relacionamento mais estável.',
+  'STEADY×PLAYER':'Estabilidade e aventura. Se expandem mutuamente, devagar.',
+  'STEADY×HARMONY':'Ambos valorizam o relacionamento. Casal caloroso e estável.',
+  'STEADY×SOUL':'Dedicação silenciosa encontra sensibilidade profunda — conexão discreta e intensa.',
+  'STEADY×LOGIC':'Praticidade e lógica. Resolvem problemas juntos, passo a passo.',
+  'STEADY×LEADER':'A dedicação do STEADY e a força do LEADER criam sinergia.',
+  'PLAYER×SPARK':'Duas energias se unem — o casal mais animado do mundo.',
+  'PLAYER×VISION':'Veem passado e futuro ao mesmo tempo. Nunca param.',
+  'PLAYER×STEADY':'A vivacidade do PLAYER ilumina o STEADY.',
+  'PLAYER×PLAYER':'Dois que aproveitam o agora ao máximo. Todo dia é festa.',
+  'PLAYER×HARMONY':'A energia do PLAYER acolhida pelo calor do HARMONY.',
+  'PLAYER×SOUL':'Exterior ativo e interior profundo — curiosidade mútua constante.',
+  'PLAYER×LOGIC':'Espontaneidade e análise. Aprendem um com o outro.',
+  'PLAYER×LEADER':'Ação e liderança: parceria poderosa.',
+  'HARMONY×SPARK':'O HARMONY abraça calorosamente a paixão do SPARK.',
+  'HARMONY×VISION':'Emoção e intuição criam um casal que alegra todos ao redor.',
+  'HARMONY×STEADY':'Ambos centrados no relacionamento. Um dos casais mais harmoniosos.',
+  'HARMONY×PLAYER':'O calor do HARMONY envolve a energia do PLAYER.',
+  'HARMONY×HARMONY':'Dois que se cuidam profundamente. Escolhem harmonia em vez de conflito.',
+  'HARMONY×SOUL':'Dois tipos emocionais: o casal mais sensível do mundo.',
+  'HARMONY×LOGIC':'Emoção e razão. Equilíbrio clássico onde cada um é o contrapeso do outro.',
+  'HARMONY×LEADER':'A empatia do HARMONY suaviza a determinação do LEADER.',
+  'SOUL×SPARK':'A profundidade do SOUL guia o SPARK em direção ao que tem significado.',
+  'SOUL×VISION':'Dois exploradores internos. Conversas que abrem universos.',
+  'SOUL×STEADY':'A sensibilidade do SOUL apoiada silenciosamente pelo STEADY.',
+  'SOUL×PLAYER':'Profundidade e energia: uma harmonia surpreendente que os faz crescer.',
+  'SOUL×HARMONY':'Sensibilidade dobrada. Leem os sentimentos um do outro com facilidade.',
+  'SOUL×SOUL':'Ambos sentem e amam profundamente. Relacionamento intenso e verdadeiro.',
+  'SOUL×LOGIC':'Emoção e lógica colidem às vezes, mas encontram equilíbrio.',
+  'SOUL×LEADER':'Os valores do SOUL servem de bússola para o LEADER.',
+  'LOGIC×SPARK':'O LOGIC refina e torna possíveis as ideias do SPARK.',
+  'LOGIC×VISION':'Dois analistas. Leem os padrões do mundo juntos.',
+  'LOGIC×STEADY':'Ambos valorizam confiança e consistência. Relacionamento sólido.',
+  'LOGIC×PLAYER':'Lógica e espontaneidade. Preenchem as lacunas um do outro divertidamente.',
+  'LOGIC×HARMONY':'Razão e emoção buscando equilíbrio — casal que cresce junto.',
+  'LOGIC×SOUL':'Análise e sensibilidade coexistem. Conversas em profundidade.',
+  'LOGIC×LOGIC':'Ambos são lógicos. Parecem debater muito, mas se entendem profundamente.',
+  'LOGIC×LEADER':'Lógica e execução: equipe perfeita rumo a objetivos.',
+  'LEADER×SPARK':'Duas forças se encontram — energia impressionante.',
+  'LEADER×VISION':'Execução e intuição: a parceria mais forte.',
+  'LEADER×STEADY':'A velocidade do LEADER moderada sabiamente pelo STEADY.',
+  'LEADER×PLAYER':'Dois que agem. Casal ativo, sempre fazendo algo.',
+  'LEADER×HARMONY':'Determinação e empatia em equilíbrio.',
+  'LEADER×SOUL':'Orientação a objetivos encontra orientação a valores — se enriquecem.',
+  'LEADER×LOGIC':'Metas e metodologia: juntos não há o que não alcancem.',
+  'LEADER×LEADER':'Dois líderes. Disputa pela liderança, mas são os que mais se entendem.'
 };
 
 let currentFilter = 'ALL';
-let selectedCombo = null;
 
-// URL 파라미터에서 자동 선택
-(function(){
-  const p = new URLSearchParams(window.location.search);
-  const a = (p.get('a')||'').toUpperCase();
-  const b = (p.get('b')||'').toUpperCase();
-  if(a && b && TYPES.includes(a) && TYPES.includes(b)){
-    selectedCombo = a+'×'+b;
-  }
-})();
+// URL 파라미터에서 자동 하이라이트
+const _p = new URLSearchParams(window.location.search);
+const _preA = (_p.get('a')||'').toUpperCase();
+const _preB = (_p.get('b')||'').toUpperCase();
+let preselected = (TYPES.includes(_preA) && TYPES.includes(_preB)) ? _preA+'_'+_preB : null;
 
 function getAllCombos(){
   const list = [];
-  TYPES.forEach(a => TYPES.forEach(b => list.push(a+'×'+b)));
+  TYPES.forEach(a => TYPES.forEach(b => list.push(a+'_'+b)));
   return list;
 }
 
@@ -224,59 +269,47 @@ function setFilter(f, btn){
 function renderList(){
   const q = document.getElementById('search-input').value.trim().toUpperCase();
   const all = getAllCombos();
-  const filtered = all.filter(combo => {
-    const [a,b] = combo.split('×');
+  const filtered = all.filter(key => {
+    const [a,b] = key.split('_');
     if(currentFilter !== 'ALL' && a !== currentFilter && b !== currentFilter) return false;
-    if(q && !combo.includes(q)) return false;
+    if(q && !key.includes(q)) return false;
     return true;
   });
 
-  document.getElementById('count-text').innerHTML = `총 <span>${filtered.length}</span>개 조합`;
+  document.getElementById('count-text').innerHTML = `Total de <span>${filtered.length}</span> combinações`;
 
   if(filtered.length === 0){
-    document.getElementById('product-list').innerHTML = '<div class="empty">검색 결과가 없습니다.</div>';
+    document.getElementById('product-list').innerHTML = '<div class="empty">Nenhum resultado encontrado.</div>';
     return;
   }
 
-  document.getElementById('product-list').innerHTML = filtered.map(combo => {
-    const [a,b] = combo.split('×');
-    const desc = COMBO_DESC[combo] || '';
-    const isSelected = selectedCombo === combo;
-    return `<div class="product-card${isSelected?' selected':''}" id="card-${combo}" onclick="selectCombo('${combo}')">
+  document.getElementById('product-list').innerHTML = filtered.map(key => {
+    const [a,b] = key.split('_');
+    const comboDisplay = a+'×'+b;
+    const desc = COMBO_DESC[comboDisplay] || '';
+    const url = HOTMART_URLS[key] || '#';
+    const isHighlighted = preselected === key;
+    return `<a class="product-card${isHighlighted?' selected':''}" href="${url}" target="_blank" rel="noopener">
       <div class="card-header">
-        <div class="card-combo">${combo} <span style="color:var(--silver);font-weight:400;font-size:11px;">· ${TYPE_KR[a]}×${TYPE_KR[b]}</span></div>
-        <div style="font-size:18px;">${isSelected?'✅':''}</div>
+        <div class="card-combo">${comboDisplay} <span style="color:var(--silver);font-weight:400;font-size:11px;">· ${TYPE_PT[a]}×${TYPE_PT[b]}</span></div>
+        <div style="font-size:14px;color:var(--gold-l);">→</div>
       </div>
       <div class="card-desc">${desc}</div>
-      <div class="card-price"><span class="card-orig">19,800원</span>9,900원</div>
-    </div>`;
+      <div class="card-price">R$ 19,90</div>
+      <div class="card-cta">Comprar no Hotmart →</div>
+    </a>`;
   }).join('');
-
-  updateBuyBar();
-}
-
-function selectCombo(combo){
-  selectedCombo = (selectedCombo === combo) ? null : combo;
-  renderList();
-}
-
-function updateBuyBar(){
-  const bar = document.getElementById('buy-bar');
-  const txt = document.getElementById('buy-bar-text');
-  if(selectedCombo){
-    bar.classList.add('show');
-    txt.innerHTML = `<strong>${selectedCombo}</strong> 커플 리포트 · 9,900원`;
-  } else {
-    bar.classList.remove('show');
-  }
-}
-
-function handleBuy(){
-  if(!selectedCombo){ alert('유형 조합을 선택해 주세요.'); return; }
-  alert('결제 시스템 준비 중입니다.\n선택: '+selectedCombo+' 커플 리포트\n\n곧 카카오페이 연동이 완료됩니다!');
 }
 
 renderList();
+
+// 결과 페이지에서 넘어온 경우 해당 카드로 스크롤
+if(preselected){
+  setTimeout(()=>{
+    const el = document.querySelector('.product-card.selected');
+    if(el) el.scrollIntoView({behavior:'smooth', block:'center'});
+  }, 300);
+}
 </script>
 </body>
 </html>
