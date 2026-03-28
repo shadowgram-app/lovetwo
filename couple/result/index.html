@@ -599,14 +599,14 @@
         O Shadowgram divide a personalidade em <strong style="color:var(--gold);">8 tipos de energia (função principal)</strong> — mostrando seus pontos fortes (Luz) e pontos de crescimento (Sombra) juntos. É um framework de life coaching baseado na psicologia analítica de Carl Jung, a origem do MBTI®.
       </p>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:14px;">
-        <div style="background:#13131F;border:1px solid #1E1E30;border-radius:12px;padding:10px 6px;text-align:center;"><div style="font-size:18px;margin-bottom:4px;">⚡</div><div style="font-size:10px;font-weight:900;color:#FF9040;">SPARK</div><div style="font-size:8px;color:var(--silver);margin-top:2px;">ENFP·ENTP</div></div>
-        <div style="background:#13131F;border:1px solid #1E1E30;border-radius:12px;padding:10px 6px;text-align:center;"><div style="font-size:18px;margin-bottom:4px;">🔮</div><div style="font-size:10px;font-weight:900;color:#9B6FCC;">VISION</div><div style="font-size:8px;color:var(--silver);margin-top:2px;">INFJ·INTJ</div></div>
-        <div style="background:#13131F;border:1px solid #1E1E30;border-radius:12px;padding:10px 6px;text-align:center;"><div style="font-size:18px;margin-bottom:4px;">⚓</div><div style="font-size:10px;font-weight:900;color:#5B8FCC;">STEADY</div><div style="font-size:8px;color:var(--silver);margin-top:2px;">ISFJ·ISTJ</div></div>
-        <div style="background:#13131F;border:1px solid #1E1E30;border-radius:12px;padding:10px 6px;text-align:center;"><div style="font-size:18px;margin-bottom:4px;">🎯</div><div style="font-size:10px;font-weight:900;color:#E04040;">PLAYER</div><div style="font-size:8px;color:var(--silver);margin-top:2px;">ESFP·ESTP</div></div>
-        <div style="background:#13131F;border:1px solid #1E1E30;border-radius:12px;padding:10px 6px;text-align:center;"><div style="font-size:18px;margin-bottom:4px;">🌸</div><div style="font-size:10px;font-weight:900;color:#E060A0;">HARMONY</div><div style="font-size:8px;color:var(--silver);margin-top:2px;">ESFJ·ENFJ</div></div>
-        <div style="background:#13131F;border:1px solid #1E1E30;border-radius:12px;padding:10px 6px;text-align:center;"><div style="font-size:18px;margin-bottom:4px;">💎</div><div style="font-size:10px;font-weight:900;color:#50A878;">SOUL</div><div style="font-size:8px;color:var(--silver);margin-top:2px;">INFP·ISFP</div></div>
-        <div style="background:#13131F;border:1px solid #1E1E30;border-radius:12px;padding:10px 6px;text-align:center;"><div style="font-size:18px;margin-bottom:4px;">🔬</div><div style="font-size:10px;font-weight:900;color:#40C8C8;">LOGIC</div><div style="font-size:8px;color:var(--silver);margin-top:2px;">ISTP·INTP</div></div>
-        <div style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.35);border-radius:12px;padding:10px 6px;text-align:center;"><div style="font-size:18px;margin-bottom:4px;">⚙️</div><div style="font-size:10px;font-weight:900;color:#C9A84C;">LEADER</div><div style="font-size:8px;color:var(--silver);margin-top:2px;">ESTJ·ENTJ</div></div>
+        <div onclick="showTypeInfo('SPARK')" style="cursor:pointer;background:#13131F;border:1px solid #1E1E30;border-radius:12px;padding:10px 6px;text-align:center;transition:border-color 0.2s;" onmouseenter="this.style.borderColor='#FF9040'" onmouseleave="this.style.borderColor='#1E1E30'"><div style="font-size:18px;margin-bottom:4px;">⚡</div><div style="font-size:10px;font-weight:900;color:#FF9040;">SPARK</div><div style="font-size:8px;color:var(--silver);margin-top:2px;">ENFP·ENTP</div></div>
+        <div onclick="showTypeInfo('VISION')" style="cursor:pointer;background:#13131F;border:1px solid #1E1E30;border-radius:12px;padding:10px 6px;text-align:center;transition:border-color 0.2s;" onmouseenter="this.style.borderColor='#9B6FCC'" onmouseleave="this.style.borderColor='#1E1E30'"><div style="font-size:18px;margin-bottom:4px;">🔮</div><div style="font-size:10px;font-weight:900;color:#9B6FCC;">VISION</div><div style="font-size:8px;color:var(--silver);margin-top:2px;">INFJ·INTJ</div></div>
+        <div onclick="showTypeInfo('STEADY')" style="cursor:pointer;background:#13131F;border:1px solid #1E1E30;border-radius:12px;padding:10px 6px;text-align:center;transition:border-color 0.2s;" onmouseenter="this.style.borderColor='#5B8FCC'" onmouseleave="this.style.borderColor='#1E1E30'"><div style="font-size:18px;margin-bottom:4px;">⚓</div><div style="font-size:10px;font-weight:900;color:#5B8FCC;">STEADY</div><div style="font-size:8px;color:var(--silver);margin-top:2px;">ISFJ·ISTJ</div></div>
+        <div onclick="showTypeInfo('PLAYER')" style="cursor:pointer;background:#13131F;border:1px solid #1E1E30;border-radius:12px;padding:10px 6px;text-align:center;transition:border-color 0.2s;" onmouseenter="this.style.borderColor='#E04040'" onmouseleave="this.style.borderColor='#1E1E30'"><div style="font-size:18px;margin-bottom:4px;">🎯</div><div style="font-size:10px;font-weight:900;color:#E04040;">PLAYER</div><div style="font-size:8px;color:var(--silver);margin-top:2px;">ESFP·ESTP</div></div>
+        <div onclick="showTypeInfo('HARMONY')" style="cursor:pointer;background:#13131F;border:1px solid #1E1E30;border-radius:12px;padding:10px 6px;text-align:center;transition:border-color 0.2s;" onmouseenter="this.style.borderColor='#E060A0'" onmouseleave="this.style.borderColor='#1E1E30'"><div style="font-size:18px;margin-bottom:4px;">🌸</div><div style="font-size:10px;font-weight:900;color:#E060A0;">HARMONY</div><div style="font-size:8px;color:var(--silver);margin-top:2px;">ESFJ·ENFJ</div></div>
+        <div onclick="showTypeInfo('SOUL')" style="cursor:pointer;background:#13131F;border:1px solid #1E1E30;border-radius:12px;padding:10px 6px;text-align:center;transition:border-color 0.2s;" onmouseenter="this.style.borderColor='#50A878'" onmouseleave="this.style.borderColor='#1E1E30'"><div style="font-size:18px;margin-bottom:4px;">💎</div><div style="font-size:10px;font-weight:900;color:#50A878;">SOUL</div><div style="font-size:8px;color:var(--silver);margin-top:2px;">INFP·ISFP</div></div>
+        <div onclick="showTypeInfo('LOGIC')" style="cursor:pointer;background:#13131F;border:1px solid #1E1E30;border-radius:12px;padding:10px 6px;text-align:center;transition:border-color 0.2s;" onmouseenter="this.style.borderColor='#40C8C8'" onmouseleave="this.style.borderColor='#1E1E30'"><div style="font-size:18px;margin-bottom:4px;">🔬</div><div style="font-size:10px;font-weight:900;color:#40C8C8;">LOGIC</div><div style="font-size:8px;color:var(--silver);margin-top:2px;">ISTP·INTP</div></div>
+        <div onclick="showTypeInfo('LEADER')" style="cursor:pointer;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.35);border-radius:12px;padding:10px 6px;text-align:center;transition:border-color 0.2s;" onmouseenter="this.style.borderColor='#C9A84C'" onmouseleave="this.style.borderColor='rgba(201,168,76,0.35)'"><div style="font-size:18px;margin-bottom:4px;">⚙️</div><div style="font-size:10px;font-weight:900;color:#C9A84C;">LEADER</div><div style="font-size:8px;color:var(--silver);margin-top:2px;">ESTJ·ENTJ</div></div>
       </div>
       <p style="font-size:11px;color:var(--silver);line-height:1.7;">* MBTI® is a registered trademark of The Myers &amp; Briggs Foundation. O Shadowgram é um framework independente, sem vínculo com The Myers &amp; Briggs Foundation. loveTWO serve o conteúdo de casal do Shadowgram (Shadowgram Duo).</p>
     </div>
@@ -665,6 +665,27 @@
   </div>
 </div>
 <div class="toast" id="toast"></div>
+
+<!-- ── 8유형 팝업 오버레이 ── -->
+<div id="type-info-overlay" onclick="closeTypeInfo()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.72);z-index:9000;backdrop-filter:blur(4px);"></div>
+<div id="type-info-sheet" style="display:none;position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#13131F;border-radius:24px 24px 0 0;border-top:1px solid #2A2A3F;z-index:9001;padding:24px 20px 40px;box-sizing:border-box;transition:transform 0.3s;">
+  <div style="width:40px;height:4px;background:#2A2A3F;border-radius:2px;margin:0 auto 20px;"></div>
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+    <div id="ti-icon" style="font-size:32px;"></div>
+    <div>
+      <div id="ti-name" style="font-size:20px;font-weight:900;"></div>
+      <div id="ti-mbti" style="font-size:11px;color:var(--silver);margin-top:2px;letter-spacing:1px;"></div>
+    </div>
+  </div>
+  <div style="margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:2px;color:#E8C97A;margin-bottom:8px;">✦ LUZ</div>
+    <div id="ti-light" style="display:flex;flex-direction:column;gap:6px;"></div>
+  </div>
+  <div>
+    <div style="font-size:10px;font-weight:700;letter-spacing:2px;color:#8899AA;margin-bottom:8px;">✦ SOMBRA</div>
+    <div id="ti-shadow" style="display:flex;flex-direction:column;gap:6px;"></div>
+  </div>
+</div>
 
 <script>
 // ── 유형별 메타 (아이콘, 색상, 드라마 캐릭터 설명, 빛/그림자) ──
@@ -1975,6 +1996,45 @@ function hwClose(){
   document.getElementById('hw-overlay').classList.remove('open');
 }
 document.addEventListener('keydown',function(e){if(e.key==='Escape')hwClose();});
+
+// ── 8유형 팝업 함수 ──
+function showTypeInfo(type) {
+  const m = TYPE_META[type];
+  if (!m) return;
+  document.getElementById('ti-icon').textContent = m.icon;
+  document.getElementById('ti-name').textContent = type;
+  document.getElementById('ti-name').style.color = m.color;
+  document.getElementById('ti-mbti').textContent = m.mbti;
+  // 빛
+  const lightEl = document.getElementById('ti-light');
+  lightEl.innerHTML = (m.light||[]).map(t =>
+    `<div style="background:rgba(232,201,122,0.06);border-left:3px solid ${m.color};border-radius:0 8px 8px 0;padding:8px 12px;font-size:12px;color:#CCDDEE;line-height:1.5;">☀️ ${t}</div>`
+  ).join('');
+  // 그림자
+  const shadowEl = document.getElementById('ti-shadow');
+  shadowEl.innerHTML = (m.shadow||[]).map(t =>
+    `<div style="background:rgba(100,100,140,0.08);border-left:3px solid #4A4A6A;border-radius:0 8px 8px 0;padding:8px 12px;font-size:12px;color:#8899AA;line-height:1.5;">🌑 ${t}</div>`
+  ).join('');
+  // 표시
+  const overlay = document.getElementById('type-info-overlay');
+  const sheet = document.getElementById('type-info-sheet');
+  overlay.style.display = 'block';
+  sheet.style.display = 'block';
+  sheet.style.transform = 'translateX(-50%) translateY(100%)';
+  requestAnimationFrame(() => {
+    sheet.style.transition = 'transform 0.32s cubic-bezier(0.32,0.72,0,1)';
+    sheet.style.transform = 'translateX(-50%) translateY(0)';
+  });
+}
+function closeTypeInfo() {
+  const sheet = document.getElementById('type-info-sheet');
+  const overlay = document.getElementById('type-info-overlay');
+  sheet.style.transform = 'translateX(-50%) translateY(100%)';
+  setTimeout(() => {
+    sheet.style.display = 'none';
+    overlay.style.display = 'none';
+  }, 320);
+}
 </script>
 </body>
 </html>
