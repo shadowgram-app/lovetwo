@@ -589,6 +589,22 @@
       </div>
       <div style="font-size:11px;color:#FF8080;font-weight:700;">⏰ Preço sujeito a alteração</div>
     </div>
+    <!-- 후기 -->
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:16px;margin-bottom:16px;text-align:left;">
+      <div style="font-size:10px;letter-spacing:1.5px;color:rgba(201,168,76,0.7);margin-bottom:10px;">✦ REVIEW REAL ✦</div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.8);line-height:1.8;font-style:italic;">"O teste parecia curto demais, fiquei na dúvida no começo. Mas quando li o relatório completo, pareceu um dossiê feito só pra gente. Nos ajudou a entender um ao outro de um jeito que anos de conversa não tinham conseguido."</div>
+      <div style="margin-top:10px;font-size:11px;color:rgba(255,255,255,0.35);">— Usuária, Coreia ⭐⭐⭐⭐⭐</div>
+    </div>
+
+    <!-- 파트너 공유 -->
+    <div style="background:rgba(37,211,102,0.06);border:1px solid rgba(37,211,102,0.2);border-radius:14px;padding:14px 16px;margin-bottom:16px;text-align:center;">
+      <div style="font-size:12px;color:rgba(37,211,102,0.9);font-weight:800;margin-bottom:6px;">💚 Só um de vocês precisa pagar</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:12px;">O relatório é do casal — não de cada um.<br><strong style="color:rgba(255,255,255,0.8);">Vocês são um só.</strong></div>
+      <button onclick="shareReport()" style="width:100%;background:linear-gradient(135deg,#25D366,#128C7E);color:white;border:none;border-radius:12px;padding:13px;font-size:14px;font-weight:900;font-family:inherit;cursor:pointer;">
+        💚 Enviar para o parceiro(a) pagar
+      </button>
+    </div>
+
     <button class="btn-report" onclick="getReport()">📄 Ver Relatório Completo →</button>
   </div>
 
@@ -1935,6 +1951,17 @@ function getReport(){
   const url=HOTMART_URLS[combo];
   if(!url){showToast('Relatório não encontrado para esta combinação 😢');return;}
   window.open(url,'_blank','noopener');
+}
+
+function shareReport(){
+  const params=new URLSearchParams(window.location.search);
+  const a=(params.get('a')||'SPARK').toUpperCase();
+  const b=(params.get('b')||'VISION').toUpperCase();
+  const combo=`${a}_${b}`;
+  const url=HOTMART_URLS[combo];
+  if(!url){showToast('Link não encontrado 😢');return;}
+  const msg=encodeURIComponent(`💫 Fizemos o teste de casal e o resultado foi incrível!\n\nSó um de nós precisa pagar — somos um só 💚\n\n👉 ${url}`);
+  window.open(`https://wa.me/?text=${msg}`,'_blank','noopener');
 }
 
 function hwToggle(){
