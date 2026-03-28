@@ -2,81 +2,192 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Política de Privacidade — 42world</title>
+<title>Política de Privacidade — loveTWO</title>
 <style>
-*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-:root { --bg:#0F121E; --card:#1A2030; --gold-l:#D4A017; --silver:#8899AA; --text:#E8E4DC; --border:rgba(184,134,11,0.2); }
-body { font-family:'Apple SD Gothic Neo','Malgun Gothic','Montserrat','Inter',sans-serif; background:var(--bg); color:var(--text); min-height:100vh; }
-.nav { display:flex; align-items:center; padding:0 20px; height:52px; background:rgba(15,18,30,0.95); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:99; }
-.nav a { color:var(--gold-l); font-weight:900; font-size:17px; text-decoration:none; }
-.wrap { max-width:680px; margin:0 auto; padding:40px 20px 80px; }
-h1 { font-size:22px; font-weight:900; color:#fff; margin-bottom:6px; }
-.updated { font-size:12px; color:var(--silver); margin-bottom:32px; }
-h2 { font-size:15px; font-weight:700; color:var(--gold-l); margin:28px 0 10px; }
-p, li { font-size:14px; color:rgba(232,228,220,0.8); line-height:1.8; }
-ul { padding-left:18px; margin-top:6px; }
-li { margin-bottom:4px; }
-table { width:100%; border-collapse:collapse; margin-top:10px; font-size:13px; }
-th, td { border:1px solid var(--border); padding:10px 12px; text-align:left; color:rgba(232,228,220,0.8); }
-th { background:rgba(184,134,11,0.1); color:var(--gold-l); font-weight:700; }
-footer { border-top:1px solid var(--border); padding:24px 20px; text-align:center; }
-.footer-links { display:flex; justify-content:center; flex-wrap:wrap; gap:14px; margin-bottom:10px; }
-.footer-links a { font-size:12px; color:var(--silver); text-decoration:none; }
-.footer-biz { font-size:11px; color:rgba(136,153,170,0.5); line-height:1.8; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--bg:#0A0C16;--gold:#C9A84C;--silver:#8899AA;--text:#E8E4DC;--dim:rgba(232,228,220,0.72);--border:rgba(201,168,76,0.18);}
+body{font-family:'Arial','Helvetica Neue',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.7;}
+.nav{display:flex;align-items:center;padding:0 20px;height:52px;background:rgba(10,12,22,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:99;}
+.nav a{color:var(--gold);font-weight:900;font-size:17px;text-decoration:none;letter-spacing:1px;}
+.nav a span{font-weight:300;color:#A0A8B8;}
+.wrap{max-width:700px;margin:0 auto;padding:44px 22px 100px;}
+.page-title{font-size:24px;font-weight:900;color:#fff;margin-bottom:6px;}
+.updated{font-size:12px;color:var(--silver);margin-bottom:36px;padding-bottom:18px;border-bottom:1px solid var(--border);}
+h2{font-size:13px;font-weight:800;color:var(--gold);margin:32px 0 10px;text-transform:uppercase;letter-spacing:0.8px;}
+p{font-size:14px;color:var(--dim);line-height:1.8;margin-bottom:10px;}
+ul{padding-left:20px;margin:8px 0 10px;}
+li{font-size:14px;color:var(--dim);line-height:1.8;margin-bottom:5px;}
+.law-ref{font-size:11px;color:rgba(201,168,76,0.55);font-style:italic;display:block;margin-top:4px;}
+.hbox{background:rgba(201,168,76,0.07);border:1px solid var(--border);border-radius:10px;padding:16px 18px;margin:12px 0;}
+.rights-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0;}
+.right-item{background:rgba(255,255,255,0.03);border:1px solid rgba(201,168,76,0.12);border-radius:8px;padding:12px 14px;}
+.right-item strong{display:block;font-size:12px;color:var(--gold);margin-bottom:4px;}
+.right-item span{font-size:13px;color:var(--dim);}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px;}
+th,td{border:1px solid rgba(201,168,76,0.18);padding:10px 12px;text-align:left;color:var(--dim);}
+th{background:rgba(201,168,76,0.08);color:var(--gold);font-weight:700;}
+a{color:var(--gold);text-decoration:none;}
+a:hover{text-decoration:underline;}
+footer{border-top:1px solid var(--border);padding:26px 20px;text-align:center;margin-top:20px;}
+.fl{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-bottom:10px;}
+.fl a{font-size:12px;color:var(--silver);}
+.fb{font-size:11px;color:rgba(136,153,170,0.5);line-height:1.9;}
+@media(max-width:480px){.rights-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
-<nav class="nav"><a href="/">42world</a></nav>
+<nav class="nav"><a href="/"><span>love</span>TWO</a></nav>
 <div class="wrap">
-  <h1>Política de Privacidade</h1>
-  <div class="updated">최종 업데이트: 2025년 1월 1일</div>
+  <div class="page-title">Política de Privacidade</div>
+  <div class="updated">Última atualização: 1 de março de 2026 &nbsp;·&nbsp; Versão 2.0 &nbsp;·&nbsp; Em conformidade com a LGPD (Lei 13.709/2018)</div>
 
-  <h2>제1조 (수집하는 개인정보)</h2>
-  <p>회사는 서비스 제공을 위해 아래와 같이 개인정보를 수집합니다.</p>
+  <h2>1. Controlador dos Dados</h2>
+  <p>O controlador responsável pelo tratamento dos seus dados pessoais é:</p>
+  <div class="hbox">
+    <p><strong>Shadowgram</strong> (operadora do loveTWO)<br>
+    Site: lovetwo.app<br>
+    E-mail do encarregado (DPO): <a href="mailto:contact@shadowgram.org">contact@shadowgram.org</a><br>
+    Prazo de resposta às solicitações: até <strong>15 dias</strong> (conforme LGPD, Art. 18, §3º)</p>
+  </div>
+  <span class="law-ref">LGPD, Art. 5º, VI — definição de controlador; Art. 41 — obrigatoriedade de indicação do encarregado.</span>
+
+  <h2>2. Dados Coletados e Finalidade</h2>
   <table>
-    <tr><th>수집 항목</th><th>수집 목적</th><th>보유 기간</th></tr>
-    <tr><td>이메일 주소</td><td>결제 확인 및 리포트 전달</td><td>구매일로부터 3년</td></tr>
-    <tr><td>결제 정보 (카드사 처리)</td><td>결제 처리 (직접 저장 안 함)</td><td>PG사 정책 따름</td></tr>
+    <tr><th>Dado Coletado</th><th>Finalidade</th><th>Base Legal (LGPD)</th><th>Retenção</th></tr>
+    <tr>
+      <td>E-mail (via Hotmart)</td>
+      <td>Entrega do relatório PDF e comunicações sobre o pedido</td>
+      <td>Art. 7º, V — execução de contrato</td>
+      <td>3 anos após a compra</td>
+    </tr>
+    <tr>
+      <td>Nome (via Hotmart)</td>
+      <td>Identificação do comprador e emissão de recibo</td>
+      <td>Art. 7º, V — execução de contrato</td>
+      <td>3 anos após a compra</td>
+    </tr>
+    <tr>
+      <td>Dados de pagamento</td>
+      <td>Processamento financeiro (gerenciado exclusivamente pela Hotmart/PCI-DSS)</td>
+      <td>Art. 7º, V — execução de contrato</td>
+      <td>Conforme política da Hotmart</td>
+    </tr>
+    <tr>
+      <td>Nomes inseridos no teste (A e B)</td>
+      <td>Personalização da experiência do teste — <strong>não são armazenados em servidor</strong></td>
+      <td>Art. 7º, I — consentimento (local apenas)</td>
+      <td>Somente na sessão do navegador</td>
+    </tr>
+    <tr>
+      <td>Dados de navegação (logs anônimos)</td>
+      <td>Manutenção, segurança e melhoria do serviço</td>
+      <td>Art. 7º, IX — interesse legítimo</td>
+      <td>90 dias</td>
+    </tr>
   </table>
-  <p style="margin-top:10px">테스트 중 입력하는 이름은 서버에 저장되지 않습니다.</p>
+  <p><strong>Não coletamos:</strong> dados sensíveis (Art. 5º, II da LGPD), dados de menores de 18 anos, geolocalização precisa ou identificadores biométricos.</p>
+  <span class="law-ref">LGPD, Art. 7º — hipóteses de tratamento; Art. 9º — transparência sobre finalidade e base legal.</span>
 
-  <h2>제2조 (개인정보의 이용)</h2>
+  <h2>3. Compartilhamento de Dados com Terceiros</h2>
+  <p>Os seus dados pessoais são compartilhados somente com os seguintes operadores, para fins estritamente necessários à prestação do serviço:</p>
   <ul>
-    <li>결제 완료 후 리포트 다운로드 링크 전송</li>
-    <li>고객 문의 응대</li>
-    <li>서비스 관련 중요 공지 발송</li>
+    <li><strong>Hotmart</strong> (hotmart.com) — processamento de pagamento, entrega do produto digital e gestão de reembolsos;</li>
+    <li><strong>Serviços de hospedagem (GitHub Pages)</strong> — armazenamento e entrega do site estático.</li>
   </ul>
+  <p>A Shadowgram <strong>não vende, aluga ou compartilha</strong> seus dados com anunciantes, plataformas de marketing ou qualquer terceiro não listado acima, sem seu consentimento explícito.</p>
+  <p>Em caso de obrigação legal (ordem judicial ou requisição de autoridade competente), os dados poderão ser divulgados na extensão exigida por lei.</p>
+  <span class="law-ref">LGPD, Art. 7º, II e VI; Art. 26 — obrigações dos operadores de dados.</span>
 
-  <h2>제3조 (제3자 제공)</h2>
-  <p>회사는 이용자의 동의 없이 개인정보를 제3자에게 제공하지 않습니다. 단, 결제 처리를 위해 PG사(카카오페이)에 필요한 정보가 전달됩니다.</p>
+  <h2>4. Transferência Internacional de Dados</h2>
+  <p>Os dados processados pela Hotmart podem ser armazenados em servidores localizados fora do Brasil. A Hotmart adota salvaguardas contratuais e técnicas compatíveis com a LGPD para transferências internacionais.</p>
+  <span class="law-ref">LGPD, Art. 33 — transferência internacional de dados pessoais.</span>
 
-  <h2>제4조 (개인정보 보호 조치)</h2>
+  <h2>5. Segurança dos Dados</h2>
+  <p>Adotamos as seguintes medidas técnicas e organizacionais para proteger seus dados:</p>
   <ul>
-    <li>HTTPS 암호화 통신 적용</li>
-    <li>결제 정보는 PG사에서 직접 처리하며 회사 서버에 저장하지 않음</li>
+    <li>Comunicação criptografada via <strong>HTTPS/TLS</strong> em todo o site;</li>
+    <li>Dados de pagamento processados exclusivamente pela Hotmart com padrão <strong>PCI-DSS</strong>;</li>
+    <li>Nomes inseridos no teste <strong>não são transmitidos nem armazenados em servidores</strong> — permanecem apenas no navegador do usuário;</li>
+    <li>Acesso interno aos dados restrito a colaboradores com necessidade operacional.</li>
   </ul>
+  <p>Em caso de incidente de segurança que possa acarretar risco relevante ao titular, notificaremos a <strong>ANPD</strong> e os titulares afetados no prazo razoável, conforme o Art. 48 da LGPD.</p>
+  <span class="law-ref">LGPD, Art. 46 — medidas de segurança; Art. 48 — comunicação de incidentes.</span>
 
-  <h2>제5조 (이용자의 권리)</h2>
-  <p>이용자는 언제든지 개인정보 열람, 수정, 삭제를 요청할 수 있습니다. 아래 이메일로 연락해 주세요.</p>
+  <h2>6. Seus Direitos como Titular (LGPD, Art. 18)</h2>
+  <p>Como titular de dados pessoais, você tem os seguintes direitos, exercíveis a qualquer momento:</p>
+  <div class="rights-grid">
+    <div class="right-item">
+      <strong>Confirmação e Acesso</strong>
+      <span>Saber se tratamos seus dados e obter uma cópia das informações armazenadas.</span>
+    </div>
+    <div class="right-item">
+      <strong>Correção</strong>
+      <span>Solicitar a correção de dados incompletos, inexatos ou desatualizados.</span>
+    </div>
+    <div class="right-item">
+      <strong>Anonimização ou Eliminação</strong>
+      <span>Solicitar a anonimização ou exclusão de dados desnecessários ou tratados em desconformidade com a LGPD.</span>
+    </div>
+    <div class="right-item">
+      <strong>Portabilidade</strong>
+      <span>Receber seus dados em formato estruturado para transferência a outro fornecedor de serviço.</span>
+    </div>
+    <div class="right-item">
+      <strong>Revogação do Consentimento</strong>
+      <span>Retirar seu consentimento a qualquer momento, sem prejuízo do tratamento realizado anteriormente.</span>
+    </div>
+    <div class="right-item">
+      <strong>Oposição</strong>
+      <span>Opor-se a tratamento realizado com fundamento em interesse legítimo, quando houver descumprimento da LGPD.</span>
+    </div>
+    <div class="right-item">
+      <strong>Informação sobre Compartilhamento</strong>
+      <span>Saber com quais entidades públicas e privadas seus dados foram compartilhados.</span>
+    </div>
+    <div class="right-item">
+      <strong>Petição à ANPD</strong>
+      <span>Apresentar reclamação à Autoridade Nacional de Proteção de Dados (gov.br/anpd).</span>
+    </div>
+  </div>
+  <p>Para exercer qualquer desses direitos, envie e-mail para <a href="mailto:contact@shadowgram.org">contact@shadowgram.org</a>. Responderemos em até <strong>15 dias</strong>.</p>
+  <span class="law-ref">LGPD, Art. 18 — direitos do titular; Art. 18, §3º — prazo para atendimento.</span>
 
-  <h2>제6조 (쿠키 및 분석 도구)</h2>
-  <p>본 서비스는 서비스 개선을 위해 익명 통계 데이터를 수집할 수 있습니다. 개인을 식별하는 정보는 수집하지 않습니다.</p>
+  <h2>7. Cookies e Tecnologias de Rastreamento</h2>
+  <p>O site loveTWO utiliza cookies estritamente necessários para o funcionamento da sessão do teste. <strong>Não utilizamos</strong> cookies de publicidade, rastreamento cross-site ou ferramentas de analytics que identifiquem o usuário individualmente.</p>
+  <p>Dados de navegação agregados e anonimizados podem ser coletados para fins de melhoria do serviço, sem possibilidade de identificação pessoal.</p>
+  <span class="law-ref">LGPD, Art. 7º, I — consentimento para cookies não essenciais; Marco Civil da Internet, Art. 7º, VII.</span>
 
-  <h2>제7조 (문의)</h2>
-  <p>개인정보 관련 문의<br>
-  서비스명: lovetwo.app<br>
-  이메일: <a href="mailto:joculsion@gmail.com" style="color:var(--gold-l);">joculsion@gmail.com</a></p>
+  <h2>8. Dados de Menores</h2>
+  <p>O serviço loveTWO <strong>não é destinado a menores de 18 anos</strong>. Não coletamos intencionalmente dados de menores. Se tivermos conhecimento de que dados de um menor foram coletados inadvertidamente, tomaremos medidas imediatas para eliminá-los.</p>
+  <span class="law-ref">LGPD, Art. 14 — tratamento de dados de crianças e adolescentes.</span>
+
+  <h2>9. Retenção e Exclusão de Dados</h2>
+  <p>Os dados pessoais são retidos pelo período necessário ao cumprimento da finalidade para a qual foram coletados ou conforme exigido por obrigação legal. Após o término do período de retenção, os dados são eliminados de forma segura ou anonimizados.</p>
+  <span class="law-ref">LGPD, Art. 15 e 16 — término do tratamento e eliminação de dados.</span>
+
+  <h2>10. Alterações nesta Política</h2>
+  <p>Esta Política de Privacidade pode ser atualizada periodicamente. A versão mais recente estará sempre disponível em lovetwo.app/legal/privacy.html. Alterações significativas serão comunicadas com antecedência no site.</p>
+
+  <h2>11. Contato — Encarregado de Dados (DPO)</h2>
+  <div class="hbox">
+    <p><strong>Shadowgram — Encarregado de Proteção de Dados</strong><br>
+    E-mail: <a href="mailto:contact@shadowgram.org">contact@shadowgram.org</a><br>
+    Prazo de resposta: até 15 dias<br>
+    Autoridade supervisora: <a href="https://www.gov.br/anpd" target="_blank">Autoridade Nacional de Proteção de Dados (ANPD)</a></p>
+  </div>
 </div>
+
 <footer>
-  <div class="footer-links">
+  <div class="fl">
     <a href="/legal/terms.html">Termos de Uso</a>
     <a href="/legal/refund.html">Política de Reembolso</a>
-    <a href="/">홈</a>
+    <a href="/">Início</a>
   </div>
-  <div class="footer-biz">상호: 온유컴퍼니MINDWAYS8 · 사업자등록번호: 533-62-00508</div>
+  <div class="fb">
+    lovetwo.app · Shadowgram · contact@shadowgram.org<br>
+    Em conformidade com LGPD (Lei 13.709/2018) · CDC (Lei 8.078/1990) · Marco Civil da Internet (Lei 12.965/2014)
+  </div>
 </footer>
 </body>
 </html>

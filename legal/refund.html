@@ -2,70 +2,138 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Política de Reembolso — 42world</title>
+<title>Política de Reembolso — loveTWO</title>
 <style>
-*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-:root { --bg:#0F121E; --card:#1A2030; --gold-l:#D4A017; --silver:#8899AA; --text:#E8E4DC; --border:rgba(184,134,11,0.2); }
-body { font-family:'Apple SD Gothic Neo','Malgun Gothic','Montserrat','Inter',sans-serif; background:var(--bg); color:var(--text); min-height:100vh; }
-.nav { display:flex; align-items:center; padding:0 20px; height:52px; background:rgba(15,18,30,0.95); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:99; }
-.nav a { color:var(--gold-l); font-weight:900; font-size:17px; text-decoration:none; }
-.wrap { max-width:680px; margin:0 auto; padding:40px 20px 80px; }
-h1 { font-size:22px; font-weight:900; color:#fff; margin-bottom:6px; }
-.updated { font-size:12px; color:var(--silver); margin-bottom:32px; }
-h2 { font-size:15px; font-weight:700; color:var(--gold-l); margin:28px 0 10px; }
-p, li { font-size:14px; color:rgba(232,228,220,0.8); line-height:1.8; }
-ul { padding-left:18px; margin-top:6px; }
-li { margin-bottom:4px; }
-.box { background:rgba(184,134,11,0.07); border:1px solid var(--border); border-radius:12px; padding:16px 18px; margin-top:10px; }
-footer { border-top:1px solid var(--border); padding:24px 20px; text-align:center; }
-.footer-links { display:flex; justify-content:center; flex-wrap:wrap; gap:14px; margin-bottom:10px; }
-.footer-links a { font-size:12px; color:var(--silver); text-decoration:none; }
-.footer-biz { font-size:11px; color:rgba(136,153,170,0.5); line-height:1.8; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--bg:#0A0C16;--gold:#C9A84C;--silver:#8899AA;--text:#E8E4DC;--dim:rgba(232,228,220,0.72);--border:rgba(201,168,76,0.18);--green:rgba(80,180,100,0.12);--green-border:rgba(80,180,100,0.3);--red:rgba(180,60,60,0.1);--red-border:rgba(180,60,60,0.3);}
+body{font-family:'Arial','Helvetica Neue',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.7;}
+.nav{display:flex;align-items:center;padding:0 20px;height:52px;background:rgba(10,12,22,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:99;}
+.nav a{color:var(--gold);font-weight:900;font-size:17px;text-decoration:none;letter-spacing:1px;}
+.nav a span{font-weight:300;color:#A0A8B8;}
+.wrap{max-width:700px;margin:0 auto;padding:44px 22px 100px;}
+.page-title{font-size:24px;font-weight:900;color:#fff;margin-bottom:6px;}
+.updated{font-size:12px;color:var(--silver);margin-bottom:36px;padding-bottom:18px;border-bottom:1px solid var(--border);}
+h2{font-size:13px;font-weight:800;color:var(--gold);margin:32px 0 10px;text-transform:uppercase;letter-spacing:0.8px;}
+p{font-size:14px;color:var(--dim);line-height:1.8;margin-bottom:10px;}
+ul{padding-left:20px;margin:8px 0 10px;}
+li{font-size:14px;color:var(--dim);line-height:1.8;margin-bottom:5px;}
+.law-ref{font-size:11px;color:rgba(201,168,76,0.55);font-style:italic;display:block;margin-top:4px;}
+.hbox{background:rgba(201,168,76,0.07);border:1px solid var(--border);border-radius:10px;padding:16px 18px;margin:12px 0;}
+.green-box{background:var(--green);border:1px solid var(--green-border);border-radius:10px;padding:16px 18px;margin:12px 0;}
+.red-box{background:var(--red);border:1px solid var(--red-border);border-radius:10px;padding:16px 18px;margin:12px 0;}
+.badge{display:inline-block;font-size:11px;font-weight:800;padding:3px 10px;border-radius:20px;letter-spacing:0.5px;margin-bottom:8px;}
+.badge-green{background:rgba(80,180,100,0.2);color:#7EE09A;}
+.badge-gold{background:rgba(201,168,76,0.2);color:var(--gold);}
+.steps{counter-reset:step;margin:12px 0;}
+.step{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.step:last-child{border-bottom:none;}
+.step-num{width:28px;height:28px;min-width:28px;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--gold);}
+.step-content{flex:1;}
+.step-content strong{display:block;font-size:13px;color:#E8E4DC;margin-bottom:3px;}
+.step-content span{font-size:13px;color:var(--dim);}
+a{color:var(--gold);text-decoration:none;}
+a:hover{text-decoration:underline;}
+footer{border-top:1px solid var(--border);padding:26px 20px;text-align:center;margin-top:20px;}
+.fl{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-bottom:10px;}
+.fl a{font-size:12px;color:var(--silver);}
+.fb{font-size:11px;color:rgba(136,153,170,0.5);line-height:1.9;}
 </style>
 </head>
 <body>
-<nav class="nav"><a href="/">42world</a></nav>
+<nav class="nav"><a href="/"><span>love</span>TWO</a></nav>
 <div class="wrap">
-  <h1>Política de Reembolso</h1>
-  <div class="updated">최종 업데이트: 2025년 1월 1일</div>
+  <div class="page-title">Política de Reembolso</div>
+  <div class="updated">Última atualização: 1 de março de 2026 &nbsp;·&nbsp; Versão 2.0</div>
 
-  <h2>환불 가능한 경우</h2>
-  <div class="box">
+  <h2>Garantia de 7 dias — Sem Burocracia</h2>
+  <div class="green-box">
+    <div class="badge badge-green">✓ GARANTIA LEGAL</div>
+    <p>De acordo com o <strong>Art. 49 do Código de Defesa do Consumidor (Lei 8.078/1990)</strong>, você tem o direito de solicitar o reembolso integral da sua compra em até <strong>7 (sete) dias corridos</strong> a partir da data de aquisição — <strong>sem precisar dar qualquer justificativa</strong>.</p>
+    <p style="margin-top:10px;">Esse é um direito legal seu. Não existe taxa de cancelamento nem desconto no valor reembolsado.</p>
+  </div>
+  <span class="law-ref">CDC, Art. 49 — Direito de Arrependimento em compras fora do estabelecimento comercial (internet).</span>
+
+  <h2>Como Solicitar o Reembolso</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <strong>Via Hotmart (forma mais rápida)</strong>
+        <span>Acesse <a href="https://refund.hotmart.com" target="_blank">refund.hotmart.com</a>, informe o e-mail da compra e selecione o produto. O reembolso é processado automaticamente em até <strong>7 dias úteis</strong>.</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <strong>Por e-mail</strong>
+        <span>Envie um e-mail para <a href="mailto:contact@shadowgram.org">contact@shadowgram.org</a> com o <strong>número do pedido Hotmart</strong> e a solicitação de reembolso. Responderemos em até 5 dias úteis.</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <strong>Devolução do valor</strong>
+        <span>O valor integral é estornado no mesmo meio de pagamento utilizado na compra: cartão de crédito, Pix ou boleto. O prazo de visualização no extrato bancário pode variar conforme a operadora.</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Prazo de Devolução por Meio de Pagamento</h2>
+  <div class="hbox">
     <ul>
-      <li>결제 후 7일 이내이고, PDF를 다운로드하지 않은 경우</li>
-      <li>결제는 완료됐으나 리포트가 정상적으로 전달되지 않은 경우</li>
+      <li><strong>Cartão de crédito:</strong> estorno em até 2 faturas (prazo da operadora), após aprovação pela Hotmart;</li>
+      <li><strong>Pix:</strong> devolução em até 2 dias úteis após aprovação;</li>
+      <li><strong>Boleto bancário:</strong> transferência bancária em até 5 dias úteis após aprovação.</li>
     </ul>
   </div>
 
-  <h2>환불이 불가능한 경우</h2>
+  <h2>Após os 7 dias</h2>
+  <div class="red-box">
+    <p>Após o prazo legal de 7 dias, o reembolso automático não é garantido pela lei. No entanto, se o produto apresentar <strong>defeito ou não for entregue</strong> corretamente (falha técnica, link inválido, etc.), trataremos o caso individualmente e garantimos a solução sem custo adicional.</p>
+    <p style="margin-top:10px;">Entre em contato: <a href="mailto:contact@shadowgram.org">contact@shadowgram.org</a></p>
+  </div>
+  <span class="law-ref">CDC, Art. 18 e 20 — responsabilidade por vício do produto ou serviço.</span>
+
+  <h2>Situações que Garantem Reembolso Mesmo Após 7 Dias</h2>
   <ul>
-    <li>PDF 다운로드가 확인된 경우 (디지털 콘텐츠 특성상 환불 불가)</li>
-    <li>결제 후 7일이 경과한 경우</li>
-    <li>단순 변심 (콘텐츠 내용이 마음에 들지 않는다는 이유)</li>
+    <li>O link de download do relatório não funciona ou o arquivo está corrompido;</li>
+    <li>O conteúdo entregue é significativamente diferente do descrito no site;</li>
+    <li>Cobrança duplicada ou erro de processamento pelo sistema da Hotmart.</li>
+  </ul>
+  <span class="law-ref">CDC, Art. 20 — direito de rescisão contratual e restituição do valor pago por vício na prestação do serviço.</span>
+
+  <h2>Produto Entregue pela Hotmart</h2>
+  <p>Os produtos digitais do loveTWO são distribuídos pela <strong>Hotmart</strong>. Compras realizadas através da plataforma Hotmart também estão cobertas pela <strong>garantia Hotmart de 7 dias</strong>, independentemente desta política.</p>
+  <p>Para compras realizadas diretamente via Hotmart: <a href="https://refund.hotmart.com" target="_blank">refund.hotmart.com</a></p>
+
+  <h2>Reclamações e Órgãos de Defesa do Consumidor</h2>
+  <p>Se não conseguir resolver diretamente conosco, você pode acionar:</p>
+  <ul>
+    <li><a href="https://www.consumidor.gov.br" target="_blank"><strong>consumidor.gov.br</strong></a> — plataforma oficial do governo federal para mediação de conflitos de consumo;</li>
+    <li><strong>PROCON</strong> do seu município;</li>
+    <li><strong>Juizado Especial Cível (JEC)</strong> — para causas de até 40 salários mínimos, sem necessidade de advogado.</li>
   </ul>
 
-  <h2>환불 신청 방법</h2>
-  <p>환불 신청은 아래 이메일로 접수해 주세요. 결제일, 주문 번호, 환불 사유를 함께 보내주시면 영업일 기준 3일 이내 처리됩니다.<br>
-  이메일: <a href="mailto:joculsion@gmail.com" style="color:var(--gold-l);">joculsion@gmail.com</a></p>
-
-  <h2>환불 처리 기간</h2>
-  <p>환불 승인 후 카드사 정책에 따라 3~5 영업일 이내 취소됩니다.</p>
-
-  <h2>문의</h2>
-  <p>환불 관련 문의<br>
-  서비스명: lovetwo.app<br>
-  이메일: <a href="mailto:joculsion@gmail.com" style="color:var(--gold-l);">joculsion@gmail.com</a></p>
+  <h2>Contato</h2>
+  <div class="hbox">
+    <p><strong>loveTWO · Shadowgram</strong><br>
+    E-mail: <a href="mailto:contact@shadowgram.org">contact@shadowgram.org</a><br>
+    Prazo de resposta: até 5 dias úteis<br>
+    Hotmart: <a href="https://refund.hotmart.com" target="_blank">refund.hotmart.com</a></p>
+  </div>
 </div>
+
 <footer>
-  <div class="footer-links">
+  <div class="fl">
     <a href="/legal/terms.html">Termos de Uso</a>
     <a href="/legal/privacy.html">Política de Privacidade</a>
-    <a href="/">홈</a>
+    <a href="/">Início</a>
   </div>
-  <div class="footer-biz">상호: 온유컴퍼니MINDWAYS8 · 사업자등록번호: 533-62-00508</div>
+  <div class="fb">
+    lovetwo.app · Shadowgram · contact@shadowgram.org<br>
+    Em conformidade com CDC (Lei 8.078/1990) · LGPD (Lei 13.709/2018) · Marco Civil da Internet (Lei 12.965/2014)
+  </div>
 </footer>
 </body>
 </html>
