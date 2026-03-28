@@ -5,7 +5,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>loveTWO Couple — 커플 소통 스타일 분석</title>
+<title>loveTWO Couple — Análise de Estilo do Casal</title>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
 <meta property="og:title" content="Qual é o estilo do nosso casal? 👀"/>
 <meta property="og:description" content="Descubra a química do casal em 24 perguntas — loveTWO"/>
@@ -152,7 +152,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 <body>
 <nav class="sg-nav">
   <button class="hw-btn" id="hw-btn" onclick="hwToggle()" aria-label="menu"><span></span><span></span><span></span></button>
-  <a class="sg-logo" href="/"><span class="sg-s1">42</span><span class="sg-s2">WORLD</span><span class="sg-dot"> · </span><span class="sg-s3">COUPLE</span></a>
+  <a class="sg-logo" href="/"><span class="sg-s1">love</span><span class="sg-s2">TWO</span></a>
 </nav>
 <div class="wrap">
 
@@ -184,8 +184,16 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
       · Etapa 2 (Q13~24): escala de 4 pontos<br>
       · Os dois precisam responder para avançar
     </div>
-    <div style="background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.25);border-radius:12px;padding:12px 16px;margin-bottom:20px;font-size:12px;color:var(--silver);line-height:1.8;text-align:left;">
-      ⚠️ <b style="color:var(--gold);">A = 남자 / B = 여자</b>로 입력해야 드라마 포스터 매칭이 정확해요.<br>Se invertido, os tipos podem aparecer ao contrário!
+    <div style="background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.25);border-radius:12px;padding:12px 16px;margin-bottom:12px;font-size:12px;color:var(--silver);line-height:1.8;text-align:left;">
+      ⚠️ <b style="color:var(--gold);">A = rapaz / B = moça</b> — o matching de pôster de drama depende dessa ordem.<br>Se invertido, os tipos podem aparecer ao contrário!
+    </div>
+
+    <div style="background:rgba(107,158,107,0.07);border:1px solid rgba(107,158,107,0.25);border-radius:12px;padding:14px 16px;margin-bottom:20px;font-size:12px;color:var(--silver);line-height:1.9;text-align:left;">
+      <div style="font-size:10px;letter-spacing:2px;color:#6B9E6B;margin-bottom:8px;font-weight:700;">✓ VALIDAÇÃO CIENTÍFICA</div>
+      <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px;">Curto, mas preciso — e há um motivo</div>
+      <div style="margin-bottom:6px;"><b style="color:var(--text);">① Big Five</b> — Baseado no método Big Five, modelo de personalidade validado por décadas de pesquisa em psicologia.</div>
+      <div style="margin-bottom:6px;"><b style="color:var(--text);">② 24 perguntas = tamanho ideal</b> — Mais longo não é melhor. Reduz queda de concentração e aumenta a precisão.</div>
+      <div><b style="color:var(--text);">③ Baseado em comportamento</b> — Não "sou assim", mas como você age em situações reais.</div>
     </div>
 
     <button class="btn-start" id="btn-start" disabled onclick="startQuiz()">
@@ -193,7 +201,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
     </button>
 
     <div class="disclaimer" style="margin-top:16px;">
-      이 분석은 오락·참고 목적의 커플 소통 스타일 분석이며,<br>전문적인 상담을 대체하지 않습니다.
+      Esta análise é para entretenimento e referência — estilo de comunicação de casal.<br>Não substitui aconselhamento profissional.
     </div>
   </div>
 
@@ -217,8 +225,8 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
     <div class="wait-msg" id="wait-msg"></div>
 
     <div class="nav-row">
-      <button class="btn-prev" id="btn-prev" onclick="prevQ()">← 이전</button>
-      <button class="btn-next" id="btn-next" onclick="nextQ()">다음 →</button>
+      <button class="btn-prev" id="btn-prev" onclick="prevQ()">← Anterior</button>
+      <button class="btn-next" id="btn-next" onclick="nextQ()">Próximo →</button>
     </div>
   </div>
 
@@ -236,7 +244,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
         <div class="done-type-person" id="done-person-b">—</div>
       </div>
     </div>
-    <div class="done-chem" id="done-chem">케미 분석 중...</div>
+    <div class="done-chem" id="done-chem">Analisando a química...</div>
 
     <!-- 유형 설명 카드 A -->
     <div id="type-card-a" style="background:var(--card);border:1px solid rgba(201,168,76,0.3);border-radius:20px;padding:20px;margin-bottom:12px;text-align:left;"></div>
@@ -245,16 +253,16 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 
     <!-- Shadowgram 소개 -->
     <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 18px 14px;margin-bottom:24px;text-align:left;">
-      <div style="font-size:9px;letter-spacing:2px;color:var(--gold);margin-bottom:10px;">✦ SHADOWGRAM 이란?</div>
+      <div style="font-size:9px;letter-spacing:2px;color:var(--gold);margin-bottom:10px;">✦ O QUE É SHADOWGRAM?</div>
       <div style="font-size:13px;line-height:1.8;color:var(--silver);">
-        MBTI®의 원형인 칼 융의 분석심리학을 기반으로, 8가지 소통 기능을 라이프코칭 프레임으로 재구성했어요. 좋고 나쁜 유형은 없어요. 누구에게나 빛나는 면(샤이닝)과 아직 발견 못 한 면(쉐도우)이 함께 있고, 그 둘을 알아갈수록 나다운 삶과 관계가 만들어져요.
+        Baseado na psicologia analítica de Carl Jung — a origem do MBTI® — o Shadowgram reorganiza 8 funções de comunicação em um framework de life coaching. Não existe tipo bom ou ruim. Todos têm um lado que brilha e um lado ainda por descobrir. Quanto mais você conhece os dois, mais autêntica se torna sua vida e seus relacionamentos.
       </div>
-      <div style="font-size:10px;color:var(--silver);opacity:0.5;margin-top:10px;line-height:1.6;">* MBTI® is a registered trademark of The Myers & Briggs Foundation. Shadowgram은 독자적 프레임워크로, The Myers & Briggs Foundation과 무관합니다.</div>
+      <div style="font-size:10px;color:var(--silver);opacity:0.5;margin-top:10px;line-height:1.6;">* MBTI® is a registered trademark of The Myers & Briggs Foundation. Shadowgram é um framework independente, sem relação com The Myers & Briggs Foundation.</div>
     </div>
 
     <button class="btn-result" onclick="goResult()">🔍 Ver o Resultado da Química</button>
     <div class="disclaimer">
-      이 분석은 오락·참고 목적의 커플 소통 스타일 분석이며,<br>전문적인 상담을 대체하지 않습니다.<br>
+      Esta análise é para entretenimento e referência — estilo de comunicação de casal.<br>Não substitui aconselhamento profissional.<br>
       lovetwo.app · © 2025 Shadowgram
     </div>
   </div>
@@ -266,37 +274,37 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 // ── 유형 정의
 const TYPES = {
   STEADY:{icon:'🌿',name:'STEADY',
-    sub:'꾸준하고 신뢰를 쌓아가는 스타일이에요.',
-    shine:['한번 믿으면 끝까지 가요. 약속을 지키고 루틴을 쌓는 것에서 진짜 안정감이 나와요.','흔들리는 상황에서도 중심을 잡아요. 파트너가 불안할 때 가장 든든한 존재가 돼요.','작은 것들을 꾸준히 챙겨요. 말보다 행동으로 사랑을 표현하는 타입이에요.'],
-    shadow:['변화를 받아들이는 게 느려요. 새로운 시도를 미루다가 기회를 놓치기도 해요.','속마음을 잘 꺼내지 않아요. 쌓아두다가 갑자기 터지는 경우가 생겨요.','익숙한 것에 집착하면 성장이 멈춰요. \'지금 이대로도 충분해\'가 가끔 발목을 잡아요.']},
+    sub:'Estilo que constrói confiança com constância.',
+    shine:['Quando confia, vai até o fim. Segurança real vem de cumprir promessas e construir rotina.','Mantém o centro mesmo em situações instáveis. O porto seguro que o par precisa.','Cuida dos pequenos detalhes. Expressa amor com ações, não só com palavras.'],
+    shadow:['Demora a aceitar mudanças. Pode perder oportunidades por adiar novas tentativas.','Não costuma abrir o que sente por dentro. Acumula até explodir.','Apego ao familiar pode travar o crescimento.']},
   SPARK:{icon:'🔥',name:'SPARK',
-    sub:'끊임없는 아이디어와 에너지로 주변을 밝히는 스타일이에요.',
-    shine:['아이디어가 끊이지 않아요. 대화 중에 반짝이는 연결고리를 만들어내는 게 자연스러워요.','에너지가 전염돼요. 같이 있으면 주변이 밝아지고 새로운 가능성이 보이기 시작해요.','변화를 두려워하지 않아요. 낯선 상황에서도 빠르게 적응하고 재미를 찾아내요.'],
-    shadow:['시작은 폭발적인데 마무리가 약해요. 흥미가 식으면 책임보다 자유를 선택하게 돼요.','즉흥성이 파트너를 지치게 할 수 있어요. \'또 바꿔?\'라는 말을 자주 듣는 편이에요.','과거의 경험을 잘 안 돌아봐요. 비슷한 실수를 반복하면서도 이유를 모를 수 있어요.']},
+    sub:'Estilo que ilumina ao redor com ideias e energia sem fim.',
+    shine:['Ideias que não param. Conecta pontos que ninguém mais enxerga numa conversa.','Energia contagiante. A presença faz o ambiente se iluminar.','Não tem medo de mudança. Adapta rápido e encontra o lado divertido de qualquer situação.'],
+    shadow:['Começa com força mas o final é fraco. Quando o interesse esfria, escolhe liberdade antes da responsabilidade.','A espontaneidade pode cansar o par.','Não olha muito para o passado — pode repetir os mesmos erros.']},
   PLAYER:{icon:'⚡',name:'PLAYER',
-    sub:'지금 이 순간을 즐기는 활기찬 스타일이에요.',
-    shine:['지금 이 순간에 완전히 집중해요. 함께 있을 때 100%를 쏟아붓는 타입이에요.','행동이 빠르고 추진력이 있어요. 말만 하는 사람 옆에서 먼저 움직이는 사람이에요.','경험으로 배우는 것에 탁월해요. 몸으로 부딪히면서 가장 빠르게 성장해요.'],
-    shadow:['미래 계획이 약해요. 현재만 보다 보면 장기적인 관계에서 방향을 잃기 쉬워요.','깊은 대화를 어색하게 느껴요. 감정보다 행동으로 해결하려다 파트너가 외로울 수 있어요.','자극이 없으면 금방 지루해져요. 안정된 일상을 답답하게 느끼는 순간이 와요.']},
+    sub:'Estilo vibrante que vive intensamente o momento presente.',
+    shine:['Foco total no presente. Quando está junto, dá 100%.','Rápido e com energia de execução. É quem age primeiro quando outros só falam.','Aprende fazendo. Cresce mais rápido enfrentando de frente.'],
+    shadow:['Planejamento de longo prazo é fraco. Facilita perder o rumo nos relacionamentos.','Conversas profundas parecem estranhas. Pode fazer o par se sentir sozinho.','Fica entediado(a) sem estímulo — a rotina pode parecer sufocante.']},
   VISION:{icon:'🔮',name:'VISION',
-    sub:'깊이 있는 통찰과 큰 그림을 보는 스타일이에요.',
-    shine:['큰 그림을 봐요. 지금 일어나는 일이 앞으로 어떻게 연결될지 직관적으로 알아요.','본질을 꿰뚫어요. 표면보다 깊은 의미를 찾고, 진짜 중요한 게 뭔지 알아요.','영감이 풍부해요. 아무도 생각 못 한 방향에서 돌파구를 찾아내는 경우가 많아요.'],
-    shadow:['현실 감각이 흐릿할 때가 있어요. 이상이 너무 크면 지금 당장의 한 걸음이 안 보여요.','혼자만의 세계에 빠지기 쉬워요. 파트너가 이해받지 못한다고 느낄 수 있어요.','결정을 미루는 편이에요. 더 좋은 가능성이 있을 것 같아서 선택을 계속 보류해요.']},
+    sub:'Estilo com visão do todo e insights profundos.',
+    shine:['Vê o quadro grande. Percebe como os acontecimentos de hoje se conectam ao futuro.','Vai à essência. Busca o significado mais profundo.','Rico(a) em inspiração. Encontra saídas onde ninguém estava olhando.'],
+    shadow:['Senso de realidade pode ficar turvo. O primeiro passo concreto some quando o ideal é grande demais.','Fácil de se perder no próprio mundo. O par pode se sentir incompreendido(a).','Tende a adiar decisões — fica esperando uma possibilidade melhor.']},
   LOGIC:{icon:'⚙️',name:'LOGIC',
-    sub:'논리적이고 명확한 소통을 선호하는 스타일이에요.',
-    shine:['복잡한 걸 단순하게 정리해요. 감정이 뒤엉킨 상황에서도 핵심을 빠르게 짚어요.','공정하게 판단해요. 편견 없이 상황을 분석하고 가장 합리적인 결론을 찾아요.','독립적이에요. 혼자서도 잘 해결하고, 파트너에게 불필요한 짐을 주지 않으려 해요.'],
-    shadow:['감정 표현이 서툴러요. 논리로 대답하면 파트너는 공감받지 못했다고 느껴요.','차갑게 보일 수 있어요. 분석이 앞서면 관계가 데이터처럼 느껴지기도 해요.','틀리는 걸 인정하기가 어려워요. 자존심이 관계보다 앞설 때 갈등이 깊어져요.']},
+    sub:'Estilo que prefere comunicação lógica e clara.',
+    shine:['Organiza o complexo de forma simples. Chega rapidamente ao núcleo mesmo com emoções embaralhadas.','Julgamento justo. Analisa sem preconceito e encontra a conclusão mais racional.','Independente. Resolve sozinho(a) sem querer ser um peso desnecessário.'],
+    shadow:['Expressão emocional é difícil. Quando responde com lógica, o par sente que não foi compreendido(a).','Pode parecer frio(a). Quando a análise vem primeiro, o relacionamento parece dados.','Difícil admitir erros. Quando o ego vem antes do relacionamento, os conflitos aprofundam.']},
   HARMONY:{icon:'🌸',name:'HARMONY',
-    sub:'따뜻하고 배려 깊은 분위기 메이커 스타일이에요.',
-    shine:['분위기를 읽는 능력이 탁월해요. 아무 말 안 해도 파트너 감정 상태를 먼저 알아채요.','갈등을 부드럽게 풀어요. 날카로운 상황에서도 온기를 잃지 않고 연결을 회복해요.','배려가 자연스러워요. 상대가 필요한 게 뭔지 챙기는 게 힘이 아니라 본능이에요.'],
-    shadow:['자기 감정을 뒤로 미뤄요. 항상 맞춰주다 보면 내가 진짜 원하는 게 뭔지 잊게 돼요.','갈등 자체를 피하려 해요. 작은 불만을 말 못 하고 쌓다가 한꺼번에 터질 수 있어요.','인정받고 싶은 욕구가 커요. 사랑받고 있는지 확인이 자꾸 필요해지는 순간이 와요.']},
+    sub:'Estilo criador de clima — caloroso e cheio de cuidado.',
+    shine:['Habilidade de ler o ambiente. Detecta o estado emocional do par antes de ele falar.','Resolve conflitos com suavidade. Mesmo em situações tensas, mantém o calor.','Cuidar é natural. Perceber o que o outro precisa não é esforço — é instinto.'],
+    shadow:['Coloca as próprias emoções em segundo plano. De tanto se adaptar, esquece o que quer.','Evita o conflito. Não fala sobre insatisfações pequenas e acaba acumulando.','Precisa de reconhecimento. Confirmar se está sendo amado(a) se torna frequente.']},
   LEADER:{icon:'👑',name:'LEADER',
-    sub:'명확한 방향성과 추진력으로 이끄는 스타일이에요.',
-    shine:['방향이 명확해요. 목표가 생기면 가장 빠른 길을 찾아 움직이기 시작해요.','솔직해요. 돌려 말하지 않고 직접 표현하는 게 오히려 신뢰를 만들어요.','파트너를 성장시키는 사람이에요. 응원보다 자극을 주는 방식으로 사랑을 표현해요.'],
-    shadow:['내 방식이 맞다고 확신해요. 파트너 의견을 듣는 것보다 결론 내리는 게 더 편해요.','감정보다 효율이 먼저예요. 빠르게 해결하려다 파트너가 과정에서 소외될 수 있어요.','약한 모습을 보이기 싫어해요. 힘들어도 괜찮은 척하다가 번아웃이 오기도 해요.']},
+    sub:'Estilo que lidera com direção clara e força de execução.',
+    shine:['Direção clara. Quando surge um objetivo, encontra o caminho mais rápido.','Direto(a). Expressar sem rodeios cria confiança.','Faz o par crescer. Expressa amor com estímulo ao invés de só apoio.'],
+    shadow:['Convicção de que seu jeito está certo. Chegar a conclusões é mais fácil que ouvir o par.','Eficiência antes da emoção. O par pode ficar de fora do processo.','Não gosta de mostrar fraqueza. Fingir que está bem pode levar ao burnout.']},
   SOUL:{icon:'🌙',name:'SOUL',
-    sub:'감성이 깊고 자신만의 세계가 있는 스타일이에요.',
-    shine:['진심이 깊어요. 한번 마음을 주면 오래가고, 관계에 가벼움이 없어요.','내면의 세계가 풍부해요. 글, 음악, 공간처럼 말 대신 다른 방식으로 감정을 표현해요.','가치관이 뚜렷해요. 자기가 중요하게 생각하는 것을 지키기 위해 타협하지 않아요.'],
-    shadow:['표현이 너무 적어요. 속으로 다 느끼면서도 파트너는 무관심하다고 오해할 수 있어요.','상처를 오래 품어요. 작은 말 한 마디가 깊이 새겨지고 잘 잊어버리지 못해요.','완벽한 이해를 원해요. 100% 공감받지 못하면 닫아버리는 경향이 있어요.']},
+    sub:'Estilo com emoções profundas e um mundo próprio único.',
+    shine:['Sinceridade profunda. Quando entrega o coração, dura — não há leveza.','Mundo interior rico. Expressa emoções de formas alternativas — textos, música, espaço.','Valores claros. Não cede naquilo que considera importante.'],
+    shadow:['Expressão muito escassa. Sente tudo por dentro mas o par pode interpretar como indiferença.','Guarda a mágoa por muito tempo. Uma única palavra pode se fixar fundo.','Quer compreensão total. Quando não recebe 100% de empatia, tende a se fechar.']},
 };
 
 // ── 1단계 A/B 12문항
@@ -501,7 +509,7 @@ function renderScale4(area, qi){
   // 공통 질문
   const qDiv = document.createElement('div');
   qDiv.className='q-shared';
-  qDiv.innerHTML=`<div class="q-num">Q${qi+1}. <span style="font-size:9px;color:var(--silver);letter-spacing:1px;">소통 스타일 측정</span></div><div class="q-text">${q.q}</div>`;
+  qDiv.innerHTML=`<div class="q-num">Q${qi+1}. <span style="font-size:9px;color:var(--silver);letter-spacing:1px;">Medindo o Estilo</span></div><div class="q-text">${q.q}</div>`;
   area.appendChild(qDiv);
 
   const panels = document.createElement('div');
@@ -528,10 +536,10 @@ function renderScale4(area, qi){
       </div>
       <div class="scale4-btns">${btns}</div>
       <div class="s4-labels">
-        <div class="s4-label">←← 확실히</div>
-        <div class="s4-label">← 약간</div>
-        <div class="s4-label">약간 →</div>
-        <div class="s4-label">확실히 →→</div>
+        <div class="s4-label">←← com certeza</div>
+        <div class="s4-label">← um pouco</div>
+        <div class="s4-label">um pouco →</div>
+        <div class="s4-label">com certeza →→</div>
       </div>
     </div>`;
   };
@@ -618,7 +626,7 @@ function updateNextBtn(){
   const ready = answersA[qi]!==null && answersB[qi]!==null;
   const btn = document.getElementById('btn-next');
   btn.className = 'btn-next' + (ready?' ready':'');
-  btn.textContent = qi===23 ? '결과 보기 🔍' : '다음 →';
+  btn.textContent = qi===23 ? 'Ver Resultado 🔍' : 'Próximo →';
 }
 
 function nextQ(){
@@ -678,7 +686,7 @@ function calcResult(){
   const typeA=Object.entries(typeScoresA).sort((a,b)=>b[1]-a[1])[0][0];
   const typeB=Object.entries(typeScoresB).sort((a,b)=>b[1]-a[1])[0][0];
 
-  showDone(typeA, typeB);
+  goResultDirect(typeA, typeB);
 }
 
 function makeTypeCard(type, personName, colorVar){
@@ -701,9 +709,9 @@ function makeTypeCard(type, personName, colorVar){
         <div style="font-size:11px;color:var(--silver);margin-top:2px;">${t.sub}</div>
       </div>
     </div>
-    <div style="font-size:10px;letter-spacing:2px;color:#C9A84C;margin-bottom:8px;">✦ 샤이닝 (빛나는 면)</div>
+    <div style="font-size:10px;letter-spacing:2px;color:#C9A84C;margin-bottom:8px;">✦ LUZ (pontos fortes)</div>
     ${shineRows}
-    <div style="font-size:10px;letter-spacing:2px;color:var(--silver);margin-top:12px;margin-bottom:8px;">◐ 쉐도우 (아직 발견 못 한 면)</div>
+    <div style="font-size:10px;letter-spacing:2px;color:var(--silver);margin-top:12px;margin-bottom:8px;">◐ SOMBRA (a descobrir)</div>
     ${shadowRows}
   `;
 }
@@ -718,7 +726,7 @@ function showDone(typeA, typeB){
   document.getElementById('done-person-a').textContent=nameA;
   document.getElementById('done-type-b').textContent=`${tB.icon} ${typeB}`;
   document.getElementById('done-person-b').textContent=nameB;
-  document.getElementById('done-chem').textContent=`${nameA} × ${nameB} 분석 완료!`;
+  document.getElementById('done-chem').textContent=`${nameA} × ${nameB} — análise completa!`;
 
   // 유형 카드 렌더링
   document.getElementById('type-card-a').innerHTML = makeTypeCard(typeA, nameA, '#C9A84C');
@@ -730,13 +738,17 @@ function showDone(typeA, typeB){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
+function goResultDirect(typeA, typeB){
+  const na=encodeURIComponent(nameA);
+  const nb=encodeURIComponent(nameB);
+  window.location.href=`/couple/result/?a=${typeA}&b=${typeB}&na=${na}&nb=${nb}`;
+}
+
 function goResult(){
   const done=document.getElementById('done-screen');
   const typeA=done.dataset.typeA;
   const typeB=done.dataset.typeB;
-  const na=encodeURIComponent(nameA);
-  const nb=encodeURIComponent(nameB);
-  window.location.href=`/couple/result/?a=${typeA}&b=${typeB}&na=${na}&nb=${nb}`;
+  goResultDirect(typeA, typeB);
 }
 
 function showToast(msg){
@@ -751,7 +763,7 @@ function showToast(msg){
 <div class="hw-drawer" id="hw-drawer">
   <div class="hw-drawer-head">
     <div>
-      <div class="hw-drawer-logo"><span style="font-weight:300;color:#A0A8B8;">42</span>WORLD</div>
+      <div class="hw-drawer-logo"><span style="font-weight:300;color:#A0A8B8;">love</span>TWO</div>
       <div style="font-size:10px;letter-spacing:2px;color:#8899AA;margin-top:3px;">loveTWO Couple</div>
     </div>
     <button class="hw-close-btn" onclick="hwClose()">&#x2715;</button>

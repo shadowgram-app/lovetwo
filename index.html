@@ -175,7 +175,7 @@
 <body>
 <nav class="sg-nav">
   <button class="hw-btn" id="hw-btn" onclick="hwToggle()" aria-label="menu"><span></span><span></span><span></span></button>
-  <a class="sg-logo" href="/"><span class="sg-s1">42</span><span class="sg-s2">WORLD</span><span class="sg-dot"> · </span><span class="sg-s3">COUPLE</span></a>
+  <a class="sg-logo" href="/"><span class="sg-s1">love</span><span class="sg-s2">TWO</span></a>
 </nav>
 
 <!-- SCREEN 1: INTRO -->
@@ -254,8 +254,8 @@
   <div class="topbar"><strong>loveTWO Couple</strong></div>
   <div class="container">
     <div class="result-header">
-      <div class="label">우리 커플 유형</div>
-      <h2 id="result-headline">결과 분석 중...</h2>
+      <div class="label">Tipo do Casal</div>
+      <h2 id="result-headline">Analisando resultado...</h2>
     </div>
     <div class="result-card" id="result-card">
       <div class="rc-top" id="rc-top">
@@ -269,57 +269,57 @@
         <div class="rc-subtitle" id="rc-subtitle">—</div>
       </div>
       <div class="rc-mid">
-        <div class="rc-hook-label">💬 우리 커플의 대화</div>
+        <div class="rc-hook-label">💬 Nossa conversa de casal</div>
         <div class="rc-hook" id="rc-hook">—</div>
       </div>
       <div class="rc-bottom">
-        <div class="rc-stat"><div class="rc-stat-label">⚡ 긴장 포인트</div><div class="rc-stat-value" id="rc-tension">—</div></div>
-        <div class="rc-stat"><div class="rc-stat-label">✨ 우리의 마법</div><div class="rc-stat-value" id="rc-magic">—</div></div>
+        <div class="rc-stat"><div class="rc-stat-label">⚡ Ponto de Tensão</div><div class="rc-stat-value" id="rc-tension">—</div></div>
+        <div class="rc-stat"><div class="rc-stat-label">✨ Nossa Magia</div><div class="rc-stat-value" id="rc-magic">—</div></div>
       </div>
       <div class="rc-tags" id="rc-tags">—</div>
     </div>
     <div class="axes-section">
-      <div class="axes-title">Big 5 성향 비교</div>
-      <div class="axes-subtitle">두 사람의 여러가지 성향을 겹쳐 비교합니다</div>
+      <div class="axes-title">Comparação Big 5</div>
+      <div class="axes-subtitle">Comparando as tendências dos dois em diferentes dimensões</div>
       <div class="radar-wrap"><canvas id="radar-canvas" width="300" height="300"></canvas></div>
       <div class="radar-legend">
-        <div class="radar-legend-item"><div class="radar-legend-dot" style="background:#1565C0"></div><span>나</span></div>
-        <div class="radar-legend-item"><div class="radar-legend-dot" style="background:#C62828"></div><span>파트너</span></div>
+        <div class="radar-legend-item"><div class="radar-legend-dot" style="background:#1565C0"></div><span>Eu</span></div>
+        <div class="radar-legend-item"><div class="radar-legend-dot" style="background:#C62828"></div><span>Parceiro(a)</span></div>
       </div>
       <div class="big5-bars" id="big5-bars"></div>
     </div>
     <div class="share-section">
-      <div class="share-title">📲 공유하기</div>
+      <div class="share-title">📲 Compartilhar</div>
       <div class="share-buttons">
         <button class="btn-share kakao" onclick="shareKakao()">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.477 3 2 6.477 2 10.5c0 2.548 1.516 4.787 3.81 6.188L4.5 21l4.903-2.63C10.238 18.77 11.106 18.9 12 18.9c5.523 0 10-3.477 10-7.8S17.523 3 12 3z"/></svg>
-          공유하기 (카카오·문자 등)
+          Compartilhar (WhatsApp · etc.)
         </button>
-        <button class="btn-share save" onclick="saveResultImage()" id="btn-save">🖼️ 결과 이미지 저장</button>
-        <button class="btn-share copy" onclick="copyLink()">🔗 링크 복사</button>
-        <button class="btn-share restart" onclick="restart()">↺ 다시 테스트하기</button>
+        <button class="btn-share save" onclick="saveResultImage()" id="btn-save">🖼️ Salvar imagem do resultado</button>
+        <button class="btn-share copy" onclick="copyLink()">🔗 Copiar link</button>
+        <button class="btn-share restart" onclick="restart()">↺ Refazer o teste</button>
       </div>
     </div>
     <div class="insight-section">
-      <div class="insight-section-title">우리 조합 미리보기</div>
+      <div class="insight-section-title">Prévia da nossa combinação</div>
       <div id="insight-cards"></div>
     </div>
     <div class="upsell-card">
       <div class="upsell-badge">✦ Full Report</div>
-      <div class="upsell-title">우리 조합의 완전한 이야기가<br>궁금하지 않으세요?</div>
-      <div class="upsell-sub">커플 유형 완전판 리포트에는 이런 내용이 있어요.</div>
+      <div class="upsell-title">Quer conhecer a história completa<br>da combinação de vocês?</div>
+      <div class="upsell-sub">O relatório completo do casal inclui:</div>
       <div class="upsell-items">
-        <div class="upsell-item">우리 조합의 깊은 역학 — 왜 우리는 이렇게 맞는가</div>
-        <div class="upsell-item">이 조합의 단골 다툼 패턴 + 화해 코드</div>
-        <div class="upsell-item">여행 / 돈 / 미래 계획에서 각자의 방식</div>
-        <div class="upsell-item">우리 조합의 숨겨진 슈퍼파워</div>
+        <div class="upsell-item">A dinâmica profunda da combinação — por que vocês se encaixam assim</div>
+        <div class="upsell-item">Padrões de briga frequentes + código de reconciliação</div>
+        <div class="upsell-item">Como cada um lida com viagem / dinheiro / planos futuros</div>
+        <div class="upsell-item">O superpoder escondido desta combinação</div>
       </div>
-      <button class="btn-upsell" onclick="goUpsell()">커플 리포트 보러가기 →</button>
+      <button class="btn-upsell" onclick="goUpsell()">Ver relatório de casal →</button>
     </div>
     <div class="footer">
       lovetwo.app · © 2025 Shadowgram<br>
       * MBTI® is a registered trademark of The Myers &amp; Briggs Foundation.<br>
-      Shadowgram은 독자적 프레임워크로, The Myers &amp; Briggs Foundation과 무관합니다.
+      Shadowgram é um framework independente, sem vínculo com The Myers &amp; Briggs Foundation.
     </div>
   </div>
 </div>
@@ -588,7 +588,7 @@ function renderBig5Radar(sA,sB){
 
 function copyLink(){
   const url='https://lovetwo.app';
-  navigator.clipboard.writeText(url).then(()=>showToast('링크가 복사됐어요! 연인에게 공유해보세요 💑')).catch(()=>showToast('링크: '+url));
+  navigator.clipboard.writeText(url).then(()=>showToast('Link copiado! Compartilhe com seu par 💑')).catch(()=>showToast('Link: '+url));
 }
 
 function goUpsell(){
@@ -603,25 +603,25 @@ function shareKakao(){
   const shareText=combo.sub+'\n너도 테스트해봐 👇';
   const shareUrl='https://lovetwo.app';
   if(navigator.share){navigator.share({title:shareTitle,text:shareText,url:shareUrl}).catch(()=>{});}
-  else{const t=shareTitle+'\n'+shareText+'\n'+shareUrl;navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(t).then(()=>showToast('링크 복사 완료! 카카오톡에 붙여넣기 하세요 🔗')).catch(()=>fallbackCopy(t)):fallbackCopy(t);}
+  else{const t=shareTitle+'\n'+shareText+'\n'+shareUrl;navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(t).then(()=>showToast('Link copiado! Cole no WhatsApp 🔗')).catch(()=>fallbackCopy(t)):fallbackCopy(t);}
 }
 
 function fallbackCopy(text){
   const ta=document.createElement('textarea');ta.value=text;ta.style.cssText='position:fixed;opacity:0';document.body.appendChild(ta);ta.focus();ta.select();
-  try{document.execCommand('copy');showToast('링크 복사 완료! 카카오톡에 붙여넣기 하세요 🔗');}catch(e){showToast('링크: lovetwo.app');}
+  try{document.execCommand('copy');showToast('Link copiado! Cole no WhatsApp 🔗');}catch(e){showToast('Link: lovetwo.app');}
   document.body.removeChild(ta);
 }
 
 function saveResultImage(){
   const btn=document.getElementById('btn-save');
-  btn.textContent='⏳ 생성 중...';btn.disabled=true;
+  btn.textContent='⏳ Gerando...';btn.disabled=true;
   const tA=getType(state.scoresA),tB=getType(state.scoresB);
   const key=tA+'×'+tB;
   const combo=COMBOS[key]||COMBOS[tB+'×'+tA]||{title:tA+' × '+tB,sub:'우리만의 조합',hook:'',tension:'',magic:'',bg:['#1A2030','#2A3450']};
   const b5A=calcBig5(state.scoresA),b5B=calcBig5(state.scoresB);
   const vA=[b5A.extraversion,b5A.openness,b5A.agreeableness,b5A.conscientiousness,b5A.stability];
   const vB=[b5B.extraversion,b5B.openness,b5B.agreeableness,b5B.conscientiousness,b5B.stability];
-  const axisL=['에너지 타입','설렘 감도','배려 온도','연애 계획력','마음 날씨'];
+  const axisL=['Energia','Atração','Cuidado','Planejamento','Estabilidade'];
   const W=600,H=900,cv=document.createElement('canvas');cv.width=W;cv.height=H;
   const c=cv.getContext('2d');
   const bg=c.createLinearGradient(0,0,W,H);bg.addColorStop(0,combo.bg[0]);bg.addColorStop(1,combo.bg[1]);
@@ -639,7 +639,7 @@ function saveResultImage(){
   c.font='400 18px Arial,sans-serif';c.fillStyle='rgba(255,255,255,0.75)';c.fillText(combo.sub,32,tY+36);
   c.beginPath();c.moveTo(32,tY+58);c.lineTo(W-32,tY+58);c.strokeStyle='rgba(255,255,255,0.18)';c.lineWidth=1;c.stroke();
   let hY=tY+86;
-  c.font='300 13px Arial,sans-serif';c.fillStyle='rgba(255,255,255,0.5)';c.fillText('우리 커플의 대화',32,hY);hY+=22;
+  c.font='300 13px Arial,sans-serif';c.fillStyle='rgba(255,255,255,0.5)';c.fillText('Nossa conversa de casal',32,hY);hY+=22;
   c.font='bold 15px Arial,sans-serif';c.fillStyle='rgba(255,255,255,0.9)';
   const mxW=W-64,words=(combo.hook||'').split(' ');let line='';
   words.forEach(w=>{const t=line+(line?' ':'')+w;if(c.measureText(t).width>mxW&&line){c.fillText(line,32,hY);hY+=22;line=w;}else line=t;});
@@ -654,12 +654,12 @@ function saveResultImage(){
   c.font='bold 12px Arial,sans-serif';c.fillStyle='rgba(255,255,255,0.85)';c.textAlign='center';
   for(let i=0;i<N;i++){const p=rPt(i,maxR+20);c.fillText(axisL[i],p.x,p.y+4);}
   const legY=rCY+maxR+36;
-  [['나','#42A5F5'],['파트너','#EF5350']].forEach(([lbl,col],idx)=>{
+  [['Eu','#42A5F5'],['Parceiro(a)','#EF5350']].forEach(([lbl,col],idx)=>{
     const lx=W/2-70+idx*100;c.beginPath();c.arc(lx,legY,6,0,Math.PI*2);c.fillStyle=col;c.fill();
     c.font='bold 13px Arial,sans-serif';c.fillStyle='rgba(255,255,255,0.85)';c.textAlign='left';c.fillText(lbl,lx+12,legY+5);
   });
   const bxY=legY+30,bW=(W-80)/2;
-  [{label:'⚡ 긴장 포인트',val:combo.tension},{label:'✨ 우리의 마법',val:combo.magic}].forEach((box,idx)=>{
+  [{label:'⚡ Ponto de Tensão',val:combo.tension},{label:'✨ Nossa Magia',val:combo.magic}].forEach((box,idx)=>{
     const sx=32+idx*(bW+16);c.beginPath();c.roundRect(sx,bxY,bW,70,12);c.fillStyle='rgba(255,255,255,0.12)';c.fill();
     c.font='bold 10px Arial,sans-serif';c.fillStyle='rgba(255,255,255,0.55)';c.textAlign='left';c.fillText(box.label,sx+14,bxY+20);
     c.font='500 13px Arial,sans-serif';c.fillStyle='rgba(255,255,255,0.9)';
@@ -669,10 +669,10 @@ function saveResultImage(){
   });
   c.font='400 13px Arial,sans-serif';c.fillStyle='rgba(255,255,255,0.3)';c.textAlign='center';c.fillText('lovetwo.app · © 2025 Shadowgram',W/2,H-24);
   try{
-    const a=document.createElement('a');a.href=cv.toDataURL('image/png');a.download='42world_couple_'+tA+'_'+tB+'.png';a.click();
-    showToast('이미지가 저장됐어요! 인스타에 공유해보세요 📸');
-  }catch(e){showToast('저장 실패. 링크를 복사해 공유해보세요.');}
-  btn.textContent='🖼️ 결과 이미지 저장';btn.disabled=false;
+    const a=document.createElement('a');a.href=cv.toDataURL('image/png');a.download='lovetwo_couple_'+tA+'_'+tB+'.png';a.click();
+    showToast('Imagem salva! Compartilhe no Instagram 📸');
+  }catch(e){showToast('Erro ao salvar. Copie o link para compartilhar.');}
+  btn.textContent='🖼️ Salvar imagem do resultado';btn.disabled=false;
 }
 
 function showToast(msg){
@@ -738,8 +738,8 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')hwClose();});
 <div class="hw-drawer" id="hw-drawer">
   <div class="hw-drawer-head">
     <div>
-      <div class="hw-drawer-logo"><span style="font-weight:300;color:#A0A8B8;">42</span>WORLD</div>
-      <div style="font-size:10px;letter-spacing:2px;color:#8899AA;margin-top:3px;">loveTWO Couple</div>
+      <div class="hw-drawer-logo"><span style="font-weight:300;color:#A0A8B8;">love</span>TWO</div>
+      <div style="font-size:10px;letter-spacing:2px;color:#8899AA;margin-top:3px;">COUPLE</div>
     </div>
     <button class="hw-close-btn" onclick="hwClose()">&#x2715;</button>
   </div>
